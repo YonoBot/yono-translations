@@ -1,1 +1,2 @@
-# yono-translations
+# Yono Bot official translations
+Hello, and thank you for taking the time to checkout this Repo. The purpose of this repo is to allow people to contribute to the bot's translations, e.g. new translations
