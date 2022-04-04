@@ -24,6 +24,38 @@ Make sure to keep the spaces in every translation you edit. Removing these could
                 "example": "{PREFIX}ban @Moonlightt#2222"
             }
          ]
+     }
 ```
-Everything in curly braces, such as {PREIFX} or {USER_RAN_COMMAND} should not be edited, since those are variables.
+Everything in curly braces, such as `{PREIFX}` or `{USER_RAN_COMMAND}` should not be edited, since those are variables.
 
+```json
+        "responses": [
+            "It is certain.",
+            "It is decidedly so.",
+            "Without a doubt.",
+            "Yes definitely.",
+            "As I see it, yes.",
+            "Most likely.",
+            "Outlook good.",
+            "Yes.",
+            "Signs point to yes.",
+            "Reply hazy try again.",
+            "Ask again later.",
+            "Better not tell you now.",
+            "Cannot predict now.",
+            "Concentrate and ask again.",
+            "Don't count on it.",
+            "My reply is no.",
+            "Outlook not so good.",
+            "Very doubtful.",
+            "No way.",
+            "Maybe",
+            "No.",
+            "||No||",
+            "||Yes||",
+             "Hang on",
+            "It's over",
+            "It's just the beginning"
+        ]
+```
+`||No||`, and `||Yes||`. Please put your response inbetween of `||`, example: `||Translation Here||`
