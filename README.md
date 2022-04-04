@@ -4,7 +4,7 @@ Hello, and thank you for taking the time to checkout this Repo. The purpose of t
 You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that will tell you how to fork, and contribute to the translations with the best practicies
 
 ## Things to lookout for while translating
-```
+```json
     "reasonEmbed": {
         "description": " has been kicked from the server for: "
     }
