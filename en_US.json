@@ -763,6 +763,168 @@
                     "title": "Unlocked succesfully.",
                     "description": " has been unlocked succesfully by "
                 }
+            },
+            "mute": {
+                "description": "Mutes the mentioned/given user from the discord server for the specified time.",
+                "usage": [
+                    {
+                        "description": "Adds the muted role to the provided/given user.",
+                        "example": "{PREFIX}mute @Moonlightt#2222 1h"
+                    }
+                ],
+                "errorEmbed": {
+                    "memberNotFound": {
+                        "title": "Error has occured while running this command.",
+                        "description": "The following user doesn't exist, suggested reasons\n> Wrong ID\n> Wrong Name#Tag"
+                    },
+                    "noTimeProvided": {
+                        "title": "Error has occured while running this command.",
+                        "description": "Please provide a time"
+                    },
+                    "alreadyMuted": {
+                        "title": "Error has occured while running this command.",
+                        "description": "This user is already muted."
+                    },
+                    "higherRole": {
+                        "title": "Error has occured while running this command.",
+                        "description": "You cannot mute this user, suggested reasons:\n> This user has a higher role than me"
+                    },
+                    "unknownError": {
+                        "title": "Error has occured while running this command.",
+                        "description": "The following error has occured: "
+                    }
+                },
+                "embed": {
+                    "title": "This user has been muted.",
+                    "description": " has been muted for: ",
+                    "descriptiontwo": " in this server."
+                }
+            },
+            "unmute": {
+                "description": "Unmutes a user from the discord server.",
+                "usage": [
+                    {
+                        "description": "Removes the muted user from the provided user."
+                    }
+                ],
+                "errorEmbed": {
+                    "memberNotFound": {
+                        "title": "Error has occured while running this command.",
+                        "description": "We couldn't find that user, suggested reasons:\n> Wrong ID\n> User isn't in the server."
+                    },
+                    "notMuted": {
+                        "title": "Error has occured while running this command.",
+                        "description": "We couldn't unmute this user, suggested reasons:\n> User is not muted"
+                    },
+                    "embed": {
+                        "title": "Unmuted succesfully.",
+                        "description": "The following user: ",
+                        "descriptiontwo": " has been unmuted from the server."
+                    }
+                }
+            },
+            "purge": {
+                "description": "deletes the specified ammount of messages",
+                "usage": [
+                    {
+                        "description": "Deletes the provided amount of messages",
+                        "example": "{PREFIX}purge 5"
+                    }
+                ],
+                "errorEmbed": {
+                    "notANumber": {
+                        "title": "The following error has occured while running this command.",
+                        "description": "> Please provide a number only."
+                    },
+                    "lowNumber": {
+                        "title": "The following error has occured while running this command.",
+                        "description": "> Please provide a number less than 100"
+                    },
+                    "highNumber": {
+                        "title": "The following error has occured while running this command.",
+                        "description": "Please provide a number more than one."
+                    }
+                },
+                "embed": {
+                    "title": "Deleted succesfully.",
+                    "description": "The following amount: ",
+                    "descriptiontwo": " was succesfully deleted."
+                }
+            },
+            "setslowmode": {
+                "description": "Sets the channel slowmode (allos you to set less than 5 seconds)",
+                "usage": [
+                    {
+                        "description": "Sets the slowmode, allows less than 5 seconds.",
+                        "example": "{PREFIX}setslowmode 2s"
+                    }
+                ],
+                "highNumber": "The slowdown amount has to be less than 6 hours",
+                "errorEmbed": {
+                    "notANumber": {
+                        "title": "The following error has occured while running this command.",
+                        "description": "> Please provide a number only."
+                    }
+                },
+                "embed": {
+                    "slowmodeRemoved": {
+                        "title": "Slowmode has been removed.",
+                        "description": "The slowmode has been succesfully removed from this channel."
+                    },
+                    "set": {
+                        "title": "Slowmode has been set.",
+                        "description": "The slow mode has been succesfully set to:"
+                    }
+                }
+            },
+            "urlprot": {
+                "description": "Deletes any link that is sent to the discord server.",
+                "usage": [
+                    {
+                        "description": "Enables the urlprot for the server",
+                        "example": "{PREFIX}urlprot on"
+                    },
+                    {
+                        "description": "Disables the urlprot for the server",
+                        "example": "{PREFIX}urlprot off"
+                    }
+                ],
+                "argsTooSmall": "Please provide the setting value e.g., {PREFIX}urlprot on",
+                "enabled": "URLPROT is on, users can't send messages that are links in the server.",
+                "urlprotOff": "URLPROT is not on to be disabled.",
+                "disabled": "URLPROT is disabled for this guild."
+            },
+            "autorole": {
+                "description": "Adds the mentioned/given role to the mentioned/given user.",
+                "usage": [
+                    {
+                        "description": "Sets the autorole to enabled and sets the role",
+                        "example": "{PREFIX}autorole on @Member"
+                    },
+                    {
+                        "description": "Sets the autorole to disabled",
+                        "example": "{PREFIX}autorole off"
+                    }
+                ],
+                "errorEmbed": {
+                    "provdeOption": {
+                        "title": "Avaliable Autorole Options",
+                        "description": "To set autorole, you need to give a few information, such as the role that should be given.\n> .autorole < On/Off> [ Role Name (Mandotory if On)]"       
+                    },
+                    "invalidOption": {
+                        "title": "Error has occured while running this command",
+                        "description": "The option you provided was invalid! This is the correct usage: .autorole < On/Off> [ Role Name (Mandotory if On)]"
+                    },
+                    "invalidRole": {
+                        "title": "Error has occured while running this command",
+                        "description": "The role that was provided could not be found. Please try again."
+                    },
+                    "higherRole": {
+                        "title": "Error has occured while running this command",
+                        "description": "The role that was provided is too high for me to give. Please try again."
+                    }
+                },
+                "set": "The autorole has been successfully setup for this server."
             }
         }
     }
