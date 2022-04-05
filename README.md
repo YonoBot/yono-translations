@@ -30,7 +30,7 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     }
 }
 ```
-##Any text you see that is in between curly braces `{}` should not be translated as these are variables used to insert information into the strings at the time it is needed. 
+## Any text you see that is in between curly braces `{}` should not be translated as these are variables used to insert information into the strings at the time it is needed. 
 ```json
 "fields": [
     {
@@ -50,7 +50,7 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     }
 ]
 ```
-##Make sure to not to edit boolean values `true` or `false`. Any text that is empty example: `""` should be left alone.
+## Make sure to not to edit boolean values `true` or `false`. Any text that is empty example: `""` should be left alone.
 
 ```json
 {
