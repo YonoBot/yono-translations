@@ -1,14 +1,14 @@
 {
-    "langShortName": "ar_SA",
-    "langLongName": "Arabic",
-    "langLocale": "SA", 
+    "langShortName": "en_US",
+    "langLongName": "English",
+    "langLocale": "US",
     "commands": {
         "info": {
             "help": {
-                "description": "اظهار  صفحة المساعدة التي تحتوي على جميع المعلومات لكيفية إعطاء الأوامر بشكل عام أو خاص",
+                "description": "Shows the help page which has all the information about the commands or about a specific command.",
                 "usage": [
                     {
-                        "description": "إعطاء المعلومات حول روبوت الأوامر أو التعليمات.",
+                        "description": "Provides information about all of the bot's commands.",
                         "example": "{PREFIX}help"
                     },
                     {
