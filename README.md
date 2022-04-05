@@ -9,7 +9,7 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     "description": " has been kicked from the server for: "
 }
 ```
-Make sure to keep the spaces in every translation you edit. Removing these could cause your translations to be rejcected from Yono.
+Make sure to keep the spaces in every translation you edit. Removing these could cause your translations to be rejected  from Yono.
 
 ```json
 "ban": {
