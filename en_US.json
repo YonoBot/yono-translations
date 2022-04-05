@@ -1,14 +1,14 @@
 {
-    "langShortName": "en_US",
-    "langLongName": "English",
-    "langLocale": "US",
+    "langShortName": "ar_SA",
+    "langLongName": "Arabic",
+    "langLocale": "SA", 
     "commands": {
         "info": {
             "help": {
-                "description": "Shows the help page which has all the information about the commands or about a specific command.",
+                "description": "اظهار  صفحة المساعدة التي تحتوي على جميع المعلومات لكيفية إعطاء الأوامر بشكل عام أو خاص",
                 "usage": [
                     {
-                        "description": "Provides information about all of the bot's commands.",
+                        "description": "إعطاء المعلومات حول روبوت الأوامر أو التعليمات.",
                         "example": "{PREFIX}help"
                     },
                     {
@@ -204,7 +204,7 @@
                 ],
                 "embed": {
                     "title": "My Reply Is:",
-                    "description": "\n> ||This command's only a joke, please do not take it seriously||"
+                    "description": "{EIGHTBALL_RESPONSE} \n> ||This command's only a joke, please do not take it seriously||"
                 }
             },
             "advice": {
