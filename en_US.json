@@ -909,7 +909,7 @@
                 "errorEmbed": {
                     "provdeOption": {
                         "title": "Avaliable Autorole Options",
-                        "description": "To set autorole, you need to give a few information, such as the role that should be given.\n> .autorole < On/Off> [ Role Name (Mandotory if On)]"       
+                        "description": "To set autorole, you need to give a few information, such as the role that should be given.\n> .autorole < On/Off> [ Role Name (Mandotory if On)]"
                     },
                     "invalidOption": {
                         "title": "Error has occured while running this command",
@@ -925,6 +925,311 @@
                     }
                 },
                 "set": "The autorole has been successfully setup for this server."
+            }
+        },
+        "invites": {
+            "invitecodes": {
+                "description": "Get's the user's invitecodes for this server.",
+                "usage": [
+                    {
+                        "description": "Gets the invitecodes of the mentioned user",
+                        "example": "{PREFIX}invitecodes @Moonlightt#2222"
+                    }
+                ],
+                "embed": {
+                    "noInvites": "This member does not have any invitecodes/invites.",
+                    "inviteFor": "{EMOJI_LINK} Invite codes for: ",
+                    "descriptionOne": " Uses: ",
+                    "caseNever": "Never",
+                    "descriptionTwo": " Expires At: "
+                }
+            },
+            "invites": {
+                "description": "Gets the mentioned/given user's invite count for this server.",
+                "usage": [
+                    {
+                        "description": "Gets the invite count of the user that ran the command.",
+                        "example": "{PREFIX}invites"
+                    },
+                    {
+                        "description": "Gets the invite count of the mentioned user",
+                        "example": "{PREFIX}invites @Moonlightt#2222"
+                    }
+                ],
+                "embed": {
+                    "title": "Invite count for: ",
+                    "description": "Total invites: ",
+                    "fields": [
+                        {
+                            "name": "{EMOJI_MEMBERS} Joins",
+                            "value": "",
+                            "inline": true
+                        },
+                        {
+                            "name": "{EMOJI_SRVLEAVES} Leaves",
+                            "value": "",
+                            "inline": true
+                        },
+                        {
+                            "name": "{EMOJI_PLUS} Bonus",
+                            "value": "",
+                            "inline": true
+                        }
+                    ],
+                    "footer": "Command used by: "
+                },
+                "leaderboard": {
+                    "description": "Show's the leaderboard for the top invites.",
+                    "usage": [
+                        {
+                            "description": "Shows the leaderboard for the guild.",
+                            "example": "{PREFIX}leaderboard"
+                        }
+                    ],
+                    "notInLeaderboard": "You're not on the leaderboard.",
+                    "embed": {
+                        "title": "Leaderboard for ",
+                        "fieldone": "Your rank: ",
+                        "buttons": {
+                            "first": "First",
+                            "previous": "Previous",
+                            "next": "Next",
+                            "last": "Last"
+                        }
+                    }
+                },
+                "resetsettings": {
+                    "description": "Reset the setting provided.",
+                    "usage": [
+                        {
+                            "description": "Shows the menu, and allows you to reset any setting you want, e.g. Welcome Channel",
+                            "example": "{PREFIX}resetsettings"
+                        }
+                    ],
+                    "buttonError": "These buttons only apply to the person who ran the command.",
+                    "embed": {
+                        "title": "Invite settings",
+                        "description": "Select the buttons below to reset the config settings.\n\nIf the button is grey, it means the setting has been reset or the setting wasn't configured.",
+                        "footer": "Please note that once you press the button, the action is irreverseable.",
+                        "buttons": {
+                            "one": "Welcome Channel",
+                            "two": "Leave Channel",
+                            "three": "Welcome Message",
+                            "four": "Leave Message",
+                            "five": "Done"
+                        }
+                    }
+                },
+                "setbonus": {
+                    "description": "Adds bonus invites to the mentioned/given user.",
+                    "usage": [
+                        {
+                            "description": "Sets bonus to the mentioned user with the provided amount",
+                            "example": "{PREFIX}setbonus @Moonlightt#2222 5"
+                        }
+                    ],
+                    "incorrectUsage": "Incorrect Usage.\n\nCorrect usage: `.setbonus [ user ] [ number ]`",
+                    "incorrectUser": "Please make sure that the member is in this server.",
+                    "invalidNumber": "Please make sure that the amount is a valid integer.",
+                    "lowNumber": "The minimum amount for the bonus is 1.",
+                    "set": "The bonus invites have been added to the user."
+                },
+                "setjoinchannel": {
+                    "description": "Set the channel to greet the member when they join the server",
+                    "usage": [
+                        {
+                            "description": "Sets the join channel to #welcome",
+                            "example": "{PREFIX}setjoinchannel #welcome"
+                        }
+                    ],
+                    "mentionTextChannel": "Mention a text channel to set the join channel.",
+                    "channelNotFound": "The provided channel was not found.",
+                    "notTextChannel": "Please provide text channels only.",
+                    "set": "The join channel has been set to:"
+                },
+                "setjoinmessage": {
+                    "description": "Set the message to greet the member when they join the server",
+                    "usage": [
+                        {
+                            "description": "Provides embed setup, if embed was selected",
+                            "example": "{PREFIX}setjoinmessage"
+                        },
+                        {
+                            "description": "Sets a normal message welcome.",
+                            "example": "{PREFIX}setjoinmessage"
+                        }
+                    ],
+                    "embed": {
+                        "authorText": "This is an author text",
+                        "title": "This is a title",
+                        "description": "This is a description.\n\nUse the buttons below to configure this embed.",
+                        "fieldName": "This is a field name",
+                        "fieldDescription": "This is a field description",
+                        "footerText": "This is a footer text",
+                        "buttons": {
+                            "one": "Author text",
+                            "two": "Author icon",
+                            "three": "Title",
+                            "four": "Thumbnail",
+                            "five": "Description",
+                            "six": "Color",
+                            "seven": "New field",
+                            "eight": "Delete last field",
+                            "nine": "Footer text",
+                            "ten": "Footer icon",
+                            "eleven": "Done",
+                            "tweleve": "Cancel."
+                        },
+                        "objects": {
+                            "one": "Type the text that will be added to the author title",
+                            "two": "Type the link that will be added to the author icon",
+                            "three": "Type the text that will be added to the title",
+                            "four": "Type the link that will be added to thumbnail",
+                            "five": "Type the text that will be added to the description",
+                            "six": "Type the color to be added at the side of the embed.",
+                            "seven": "Type the text that will be added to the file",
+                            "eight": "Type the text that will be added to the footer text",
+                            "nine": "Type the link that will be added to the footer icon"
+                        }
+                    },
+                    "__COMMENT__": "// TODO: Continue all errors."
+                },
+                "setleavechannel": {
+                    "description": "Set the channel to announce if the member has left the server.",
+                    "usage": [
+                        {
+                            "description": "Sets the leave channel to #byebye",
+                            "example": "{PREFIX}setleavechannel #byebye"
+                        }
+                    ],
+                    "mentionTextChannel": "Mention a text channel to set the leave channel.",
+                    "channelNotFound": "The provided channel was not found.",
+                    "notTextChannel": "Please provide text channels only.",
+                    "set": "The leave channel has been set to:"
+                },
+                "setleavemessage": {
+                    "description": "Set the message to announce that the member has left the server",
+                    "usage": [
+                        {
+                            "description": "Provides embed setup, if embed was selected",
+                            "example": "{PREFIX}setleavesmessage"
+                        },
+                        {
+                            "description": "Sets a normal message for leave.",
+                            "example": "{PREFIX}setleavemessage"
+                        }
+                    ],
+                    "embed": {
+                        "authorText": "This is an author text",
+                        "title": "This is a title",
+                        "description": "This is a description.\n\nUse the buttons below to configure this embed.",
+                        "fieldName": "This is a field name",
+                        "fieldDescription": "This is a field description",
+                        "footerText": "This is a footer text",
+                        "buttons": {
+                            "one": "Author text",
+                            "two": "Author icon",
+                            "three": "Title",
+                            "four": "Thumbnail",
+                            "five": "Description",
+                            "six": "Color",
+                            "seven": "New field",
+                            "eight": "Delete last field",
+                            "nine": "Footer text",
+                            "ten": "Footer icon",
+                            "eleven": "Done",
+                            "tweleve": "Cancel."
+                        },
+                        "objects": {
+                            "one": "Type the text that will be added to the author title",
+                            "two": "Type the link that will be added to the author icon",
+                            "three": "Type the text that will be added to the title",
+                            "four": "Type the link that will be added to thumbnail",
+                            "five": "Type the text that will be added to the description",
+                            "six": "Type the color to be added at the side of the embed.",
+                            "seven": "Type the text that will be added to the file",
+                            "eight": "Type the text that will be added to the footer text",
+                            "nine": "Type the link that will be added to the footer icon"
+                        }
+                    },
+                    "__COMMENT__": "// TODO: Continue all errors."
+                },
+                "viewsettings": {
+                    "description": "View's the selected setting.",
+                    "usage": [
+                        {
+                            "description": "Shows the button menu for the user to select what setting to view.",
+                            "example": "{PREFIX}viewsettings"
+                        }
+                    ],
+                    "buttonError": "These buttons only apply to the person who ran the command.",
+                    "embed": {
+                        "title": "Invite settings",
+                        "description": "Select what setting you want to view.",
+                        "buttons": {
+                            "one": "Welcome Channel",
+                            "two": "Leave Channel",
+                            "three": "Welcome Message",
+                            "four": "Leave Message",
+                            "five": "Done"
+                        },
+                        "case": {
+                            "welcomechannel": "Welcome message channel: ",
+                            "leavechannel": "Leave message channel: ",
+                            "welcomemessage": "Welcome message content: ",
+                            "leavemessage": "Leave message content: "
+                        }
+                    }
+                }
+            }
+        },
+        "giveaways": {
+            "create": {
+                "description": "Creates a giveaway in the server",
+                "usage": [
+                    {
+                        "description": "Setups the giveaway, then confirms it.",
+                        "example": "{PREFIX}create"
+                    }
+                ],
+                "invalidTimeFormat": "Invalid format, please provide a correct format",
+                "minimiumTime": "The minimum giveaway time is 1 minute, and the maximum is 14 days",
+                "channelNotFound": "Channel not found, please try again.",
+                "notTextChannel": "The channel you provided is not a text channel, please make sure its a text channel.",
+                "prizeMsgTooLong": "Prize message is too long, please decrease the prize message.",
+                "insentValidNum": "Please insert a valid number.",
+                "minimumWinners": "The minimum amount of winners is 1, and the maximum is 20.",
+                "descriptionTooLong": "Description is too long, please decrease the description.",
+                "serverNotFound": "Server was not found, make sure that you provide the server invite, then server ID first. Not fixed? Make sure the bot is in the other guild.",
+                "notGg": "Invalid invite format, please make sure it includes: `discord.gg/`, or `discord.com/invite`",
+                "invalidRole": "Invalid role: ",
+                "invalidResponse_RoleEntries": "Invalid response. Example response: `roleB - 2, roleA - 4`",
+                "roleNotFoundOne": "Role ",
+                "roleNotFoundTwo": "  not found! Please try again.",
+                "tooLong": "You took too long to respond, the giveaway creation has been canceled.",
+                "questions": {
+                    "one": "What is the time limit on your giveaway? s/m/h/d",
+                    "two": "Which channel should the giveaway message be posted?",
+                    "three": "Which channel should the giveaway message be posted?",
+                    "four": "How many winners should there be for this giveaway?",
+                    "five": "What is the description of the giveaway? (Type N to skip)",
+                    "six": "What are the required guild to be joined? Send the server ID then link. (Type N to skip)",
+                    "sixextra": "Okay, now please enter the server link.",
+                    "seven": "What are the required roles to have? (Type N to skip)",
+                    "eight": "What roles have more enteries then other? (Type N to skip)"
+                },
+                "embed": {
+                    "title": "Giveaway Message",
+                    "descriptionOne": "Please ensure that the following details are correct:\n\nPrize: ",
+                    "descriptionTwo": "\nChannel: ",
+                    "descriptionThree": "\nEnds at: ",
+                    "descriptionFour": "\nDescription: ",
+                    "descriptionFourElse": "\nNone",
+                    "descriptionFive": "\n\nRequirements:\n - Server to join: ",
+                    "descriptionSix": "\n - Roles required: ",
+                    "descriptionSeven": "\n\nAdditional Entries: ",
+                    "confirmButton": "Press the button to confirm"
+                }
             }
         }
     }

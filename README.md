@@ -29,6 +29,27 @@ Make sure to keep the spaces in every translation you edit. Removing these could
 Everything in curly braces, such as `{PREIFX}` or `{USER_RAN_COMMAND}` should not be edited, since those are variables.
 
 ```json
+"fields": [
+    {
+        "name": "{EMOJI_MEMBERS} Joins",
+        "value": "",
+        "inline": true
+    },
+    {
+        "name": "{EMOJI_SRVLEAVES} Leaves",
+        "value": "",
+        "inline": true
+    },
+    {
+        "name": "{EMOJI_PLUS} Bonus",
+        "value": "",
+        "inline": true
+    }
+]
+```
+Always make sure not to edit `true` in `"inline": true`, and keep value empty if it is empty.
+
+```json
 "responses": [
     "It is certain.",
      "It is decidedly so.",
