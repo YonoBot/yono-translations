@@ -11,7 +11,7 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     }
 }
 ```
-##Make sure to keep the spaces in every translation you edit. Removing these could cause your translations to be rejected from being used by Yono.
+### Make sure to keep the spaces in every translation you edit. Removing these could cause your translations to be rejected from being used by Yono.
 
 ```json
 {
@@ -30,7 +30,7 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     }
 }
 ```
-## Any text you see that is in between curly braces `{}` should not be translated as these are variables used to insert information into the strings at the time it is needed. 
+### Any text you see that is in between curly braces `{}` should not be translated as these are variables used to insert information into the strings at the time it is needed. 
 ```json
 "fields": [
     {
@@ -50,7 +50,7 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     }
 ]
 ```
-## Make sure to not to edit boolean values `true` or `false`. Any text that is empty example: `""` should be left alone.
+### Make sure to not to edit boolean values `true` or `false`. Any text that is empty example: `""` should be left alone.
 
 ```json
 {
@@ -84,4 +84,4 @@ You can checkout this [guide](https://gist.github.com/MarcDiethelm/7303312) that
     ]
 }
 ```
-`||No||`, and `||Yes||`. Please put your response inbetween of `||`, example: `||Translation Here||`
+### `||No||`, and `||Yes||`. Please put your response inbetween of `||`, example: `||Translation Here||`
