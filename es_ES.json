@@ -462,83 +462,83 @@
                     "descriptionTwo": "Recordar en: "
                 }
             },
-            "say": {
-                "description": "Sends the message you wrote thru the bot.",
+           "say": {
+                "description": "Envia un mensaje que escribiste mediante el bot.",
                 "usage": [
                     {
-                        "description": "Sends the message you provided.",
-                        "example": "{PREFIX}say Hello World, Hello Yono"
+                        "description": "Envia el mensaje que tú dijiste.",
+                        "example": "{PREFIX}say Hola Mundo, Hola Yono"
                     }
                 ],
                 "errorEmbed": {
                     "noText": {
-                        "title": "You didn't provide any text",
-                        "description": "Please provide some text so use this command e.g. `{PREFIX}say < text >"
+                        "title": "No especificáste ningún texto",
+                        "description": "Por favor específica un texto para este comando e.g. `{PREFIX}say < texto >"
                     },
                     "unknownError": {
-                        "title": "An error has occured while running this command."
+                        "title": "Ocurrió un error al ejecutar este comando."
                     }
                 }
             },
             "weather": {
-                "description": "Gets the country/city's weather",
+                "description": "Consigue el tiempo de un país o ciudad",
                 "usage": [
                     {
-                        "description": "Gets the stats then sends it.",
+                        "description": "Consigue las estadísticas y luego las envia.",
                         "example": "{PREFIX}weather New York"
                     }
                 ],
                 "errorEmbed": {
                     "countryNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "We couldn't find that city/country, suggested reasons:\n> Incorrect City/Country Name"
+                        "title": "Ocurrió un error al ejecutar este comando.",
+                        "description": "No pudimos encontrar esa ciudad o país, razones sugeridas:\n> Ciudad Incorrecta/Nombre del País"
                     }
                 },
                 "embed": {
-                    "title": "Current Weather At: ",
+                    "title": "El tiempo ahora mismo en: ",
                     "fields": [
                         {
-                            "name": "**Timezone**",
+                            "name": "**Zona Horaria**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Degree Type**",
+                            "name": "**Tipo de temperatura**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Winds**",
+                            "name": "**Vientos**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Temperature**",
+                            "name": "**Temperatura**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Weather**",
+                            "name": "**Tiempo**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Day**",
+                            "name": "**Día**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Date**",
+                            "name": "**Fecha**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Humidity**",
+                            "name": "**Humedad**",
                             "value": "",
                             "inline": true
                         },
                         {
-                            "name": "**Feels like**",
+                            "name": "**Se siente como**",
                             "value": "",
                             "inline": true
                         }
@@ -546,71 +546,71 @@
                 }
             },
             "autoping": {
-                "description": "Pings the member when they join the server then deletes it.",
+                "description": "Menciona al miembro cuando se une al servidor y después lo borra.",
                 "usage": [
                     {
-                        "description": "Sets the channel and the time required to delete (s/m)",
+                        "description": "Especifica el canal y el tiempo que tardará en borrar el mensaje (s/m)",
                         "example": "{PREFIX}autoping #general 10s"
                     }
                 ],
-                "disabled": "The autoping has been disabled.",
-                "argumentsNotProvided": "You need to set the channel and time to delete.\n\nUsage: `{PREFIX}autoping [ Channel ] [ Time for message to be deleted. ]`",
-                "invalidChannel": "The channel you've given was not found. Please make sure you mention the channel or give the channel ID.",
-                "invalidFormat": "Invalid time format. `s/m`",
-                "minTime": "Minimum time for the message to be deleted is 1 second, and max is 1 minute.",
-                "set": "The autoping has been sucessfully set to:"
+                "disabled": "La automencion ha sido desactivada.",
+                "argumentsNotProvided": "Necesitas especificar el canal y el tiempo en que tardará en borrar el mensaje.\n\nUsage: `{PREFIX}autoping [ Canal ] [ Tiempo para que el mensaje sea borrado. ]`",
+                "invalidChannel": "El canal que me dijiste no existe. Por favor estate seguro de que mencionas el canal o provees su id.",
+                "invalidFormat": "Formato de tiempo inválido. `s/m`",
+                "minTime": "El tiempo mínimo para que el mensaje sea borrado es 1 segundo y el máximo 1 minuto.",
+                "set": "El automencion ha sido éxitosamente activado a:"
             }
         },
         "admin": {
             "addrole": {
-                "description": "Adds the mentioned/given role to the mentioned/given user.",
+                "description": "Añade el rol mencionado/dado a el usuario mencionado/dado.",
                 "usage": [
                     {
-                        "description": "Adds the role to the provided user",
-                        "example": "{PREFIX}addrole @Moonlightt#2222 @Yono Admin [ Reason ]"
+                        "description": "Añade el rol al usuario especificado.",
+                        "example": "{PREFIX}addrole @Moonlightt#2222 @Yono Admin [ Razón ]"
                     }
                 ],
-                "noReasonProvided": "No reason provided.",
-                "roleGivenBy": "Role given by: ",
+                "noReasonProvided": "Ninguna razón especificada.",
+                "roleGivenBy": "Role dado por: ",
                 "errorEmbed": {
                     "alreadyHasRole": {
-                        "title": "An error has occured while running this command.",
-                        "description": "This user already has this role."
+                        "title": "Ocurrió un error al ejecutar este comando.",
+                        "description": "Este usuario ya tiene el rol."
                     },
                     "higherRole": {
-                        "title": "Error has occured while running this command.",
-                        "description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
+                        "title": "Ocurrió un error al ejecutar este comando.",
+                        "description": "Ocurrió un error al añadir el rol/roles a este usuario, razones sugeridas:\n> El Usuario Tiene Un Rol Mayor"
                     }
                 },
                 "embed": {
-                    "title": "Role succesfully added.",
-                    "descriptionOne": "The role has been succesfully added, extra information:\n> Added Role: ",
-                    "descriptionTwo": "\n> Role Given To:"
+                    "title": "Rol Éxitosamente añadido.",
+                    "descriptionOne": "El rol ha sido éxitosamente añadido al usuario, información extra:\n> Rol Añadido: ",
+                    "descriptionTwo": "\n> Role Dado A:"
                 }
             },
             "removerole": {
-                "description": "Removes the mentioned/given role from the mentioned/given user.",
+                "description": "Remueve el rol mencionado/dado al usuario especificado.",
                 "usage": [
                     {
-                        "description": "Removes the role from the provided user",
-                        "example": "{PREFIX}removerole @Moonlightt#2222 @Swagy Admin [ Reason ]"
+                        "description": "Remueve el rol al usuario especificado",
+                        "example": "{PREFIX}removerole @Moonlightt#2222 @Swagy Admin [ Razón ]"
                     }
                 ],
-                "noReasonProvided": "No reason provided.",
-                "removedBy": "Role removed by: ",
+                "noReasonProvided": "Ninguna razón especificada.",
+                "removedBy": "Role removido por: ",
                 "errorEmbed": {
                     "alreadyRemoved": {
-                        "title": "Error has occured while running this command.",
-                        "description": "This user does not have this role."
+                        "title": "Ocurrió un error al ejecutar el comando.",
+                        "description": "Este usuario no tiene este rol."
                     },
                     "higherRole": {
-                        "title": "Error has occured while running this command.",
-                        "description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
+                        "title": "Ocurrió un error al ejecutar el comando.",
+                        "description": "Ocurrió un error al añadir el rol/roles a este usuario, razones sugeridas:\n> El Usuario Tiene Un Rol Mayor"
                     },
                     "embed": {
                         "title": "Role succesfully removed.",
-                        "descriptionOne": "The role has been removed, extra information: \n> Removed Role: ",
-                        "descriptionTwo": "\n> Removed From: "
+                        "descriptionOne": "El rol ha sido removido éxitosamente al usuario, información extra: \n> Rol Removido: ",
+                        "descriptionTwo": "\n> Removido a: "
                     }
                 }
             },
@@ -1063,9 +1063,14 @@
                         "authorText": "This is an author text",
                         "title": "This is a title",
                         "description": "This is a description.\n\nUse the buttons below to configure this embed.",
-                        "fieldName": "This is a field name",
-                        "fieldDescription": "This is a field description",
                         "footerText": "This is a footer text",
+                        "fields": [
+                            {
+                                "name": "This is a field name",
+                                "value": "This is a field description",
+                                "inline": true
+                            }
+                        ],
                         "buttons": {
                             "one": "Author text",
                             "two": "Author icon",
@@ -1092,7 +1097,29 @@
                             "nine": "Type the link that will be added to the footer icon"
                         }
                     },
-                    "__COMMENT__": "// TODO: Continue all errors."
+                    "cancelled": "Embed builder has been cancelled.",
+                    "typeError": "Cannot read undefined object",
+                    "256CharMax": "Please enter text shorter than 256 characters.",
+                    "3000CharMax": "Please enter text shorter than 3000 characters.",
+                    "authorImgHasToBeLink": "Author image has to be a link.",
+                    "invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
+                    "invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
+                    "fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
+                    "footerImgHasToBeLink": "Footer icon has to be a link.",
+                    "thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
+                    "cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
+                    "cancelled_RerunPopupTwo": "leavemsg",
+                    "buttonError": "These buttons only apply to the person who ran the command.",
+                    "cancelTitle": "Embed builder canceled",
+                    "cancelDescription": "This action has been canceled",
+                    "variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
+                    "variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
+                    "tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
+                    "option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
+                    "textWrite": "Write the message.",
+                    "1000CharMax": "Please provide text less than 1000 characters.",
+                    "set": "The embed has been set up, and will be sent when a user leaves.",
+                    "textSet": "Leave message has been set."
                 },
                 "setleavechannel": {
                     "description": "Set the channel to announce if the member has left the server.",
@@ -1123,9 +1150,14 @@
                         "authorText": "This is an author text",
                         "title": "This is a title",
                         "description": "This is a description.\n\nUse the buttons below to configure this embed.",
-                        "fieldName": "This is a field name",
-                        "fieldDescription": "This is a field description",
                         "footerText": "This is a footer text",
+                        "fields": [
+                            {
+                                "name": "This is a field name",
+                                "value": "This is a field description",
+                                "inline": true
+                            }
+                        ],
                         "buttons": {
                             "one": "Author text",
                             "two": "Author icon",
@@ -1152,7 +1184,29 @@
                             "nine": "Type the link that will be added to the footer icon"
                         }
                     },
-                    "__COMMENT__": "// TODO: Continue all errors."
+                    "cancelled": "Embed builder has been cancelled.",
+                    "typeError": "Cannot read undefined object",
+                    "256CharMax": "Please enter text shorter than 256 characters.",
+                    "3000CharMax": "Please enter text shorter than 3000 characters.",
+                    "authorImgHasToBeLink": "Author image has to be a link.",
+                    "invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
+                    "invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
+                    "fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
+                    "footerImgHasToBeLink": "Footer icon has to be a link.",
+                    "thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
+                    "cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
+                    "cancelled_RerunPopupTwo": "leavemsg",
+                    "buttonError": "These buttons only apply to the person who ran the command.",
+                    "cancelTitle": "Embed builder canceled",
+                    "cancelDescription": "This action has been canceled",
+                    "variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
+                    "variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
+                    "tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
+                    "option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
+                    "textWrite": "Write the message.",
+                    "1000CharMax": "Please provide text less than 1000 characters.",
+                    "set": "The embed has been set up, and will be sent when a user leaves.",
+                    "textSet": "Leave message has been set."
                 },
                 "viewsettings": {
                     "description": "View's the selected setting.",
@@ -1199,7 +1253,7 @@
                 "prizeMsgTooLong": "Prize message is too long, please decrease the prize message.",
                 "insentValidNum": "Please insert a valid number.",
                 "minimumWinners": "The minimum amount of winners is 1, and the maximum is 20.",
-                "descriptionTooLong": "La descripción es muy lar.",
+                "descriptionTooLong": "Description is too long, please decrease the description.",
                 "serverNotFound": "Server was not found, make sure that you provide the server invite, then server ID first. Not fixed? Make sure the bot is in the other guild.",
                 "notGg": "Invalid invite format, please make sure it includes: `discord.gg/`, or `discord.com/invite`",
                 "invalidRole": "Invalid role: ",
@@ -1230,6 +1284,48 @@
                     "descriptionSeven": "\n\nAdditional Entries: ",
                     "confirmButton": "Press the button to confirm"
                 }
+            },
+            "list": {
+                "description": "Sends a list of active giveaway in the server.",
+                "usage": [
+                    {
+                        "description": "Gets the list of giveaways then sends it.",
+                        "example": "{PREFIX}list"
+                    }
+                ],
+                "embed": {
+                    "title": "Active Giveaways",
+                    "noActiveDescription": "No active giveaways.",
+                    "description": "\nEnds at: "
+                }
+            },
+            "reroll": {
+                "description": "Rerolls a winner for a giveaway.",
+                "usage": [
+                    {
+                        "description": "Rolls the giveaway of the provided ID",
+                        "example": "{PREFIX}reroll 960984131687305216"
+                    }
+                ],
+                "noMsgId": "You need to give the message id.\nUsage: .reroll [ message id ]",
+                "notFound": "Giveaway not found, please make sure you insert a valid Giveaway ID and to be in the same channel as the giveaway message.",
+                "notEnded": "This giveaway has not been ended yet.",
+                "noReactions": "No one reacted to the giveaway.",
+                "msgOne": "A new winner has been rolled! Congratulations ",
+                "msgTwo": ", you have won",
+                "msgThree": "\n\nGiveaway Message: "
+            },
+            "stop": {
+                "description": "Stops a giveaway in the server.",
+                "usage": [
+                    {
+                        "description": "Stops the giveaway of the provided ID",
+                        "example": "{PREFIX}end 960984131687305216"
+                    }
+                ],
+                "noMsgId": "You need to give the message id.\nUsage: .stop [ message id ]",
+                "invalidGw": "Invalid Giveaway ID, please make sure to provide the correct giveaway ID.",
+                "ending": "Ending giveaway..."
             }
         }
     }
