@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Yono Website
+    url: https://yonobot.us/
+    about: Get support and faq through the bots website.
+  - name: Yono Support Server
+    url: https://yonobot.us/support
+    about: Get support through Yonos website.
