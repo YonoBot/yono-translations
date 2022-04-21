@@ -1,2503 +1,1337 @@
 {
-  "langShortName": "en_US",
-  "langLongName": "English",
-  "langLocale": "US",
-  "commands": {
-    "info": {
-      "help": {
-        "description": "Shows the help page which has all the information about the commands or about a specific command.",
-        "usage": [
-          {
-            "description": "Provides information about all of the bot's commands.",
-            "example": "{PREFIX}help"
-          },
-          {
-            "description": "Provides help and information about the specified command.",
-            "example": "{PREFIX}help ban"
-          }
-        ],
-        "errorEmbed": {
-          "cmdNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "No information found for the following command: "
-          }
-        },
-<<<<<<< HEAD
-        "embed": {
-          "title": "Yono Help Command",
-          "description": "{EMOJI_INFO} **Yono** bot is a multi purpose bot made for everyone, Yono (You only need one). Need help? the following links might help you:\n\n{EMOJI_CHROME} Web Help: [Website](https://yonobot.co.uk) | [FAQ Website](https://yonobot.co.uk/faq)\n\n{EMOJI_SUPPORT}  If these aren't helpful enough feel free to drop by our discord community & support server. [Discord Server](https://discord.gg/9BysjJweDt)\n\n > Admin/Moderation: `ban`, `unban`, `kick`, `purge`, `lock`, `unlock`, `mute`, `unmute`, `addrole`, `removerole`, `autorole`, `urlprot`\n\n > Information/Utility: `help`, `ping`, `say`, `avatar`, `addemoji`, `weather`, `remind`, `support`, `autoping`\n\n> Fun/Images: `binary`, `iq`, `cylde`, `meme`, `joke`, `advice`, `8ball`, `coinflip`, `dice`, `facepalm`, `eject`, `tweet`\n\n> Giveaways/Invite Management: `create`, `reroll`, `end`, `list`"
-        },
-        "cmdEmbed": {
-          "fields": [
-            {
-              "name": "**Command Name**",
-              "value": "{COMMAND_NAME}",
-              "inline": true
-            },
-            {
-              "name": "**Command Description**",
-              "value": "{COMMAND_DESCRIPTION}",
-              "inline": true
-            },
-            {
-              "name": "**Cooldown**",
-              "value": "{COMMAND_COOLDOWN}",
-              "inline": true
-            },
-            {
-              "name": "**Usage**",
-              "value": "{COMMAND_USAGE}",
-              "inline": true
-            },
-            {
-              "name": "**Required Permissions**",
-              "value": "{COMMAND_MEMBERPERMISSIONS}",
-              "inline": true
-=======
-        "fun": {
-            "eightball": {
-                "description": "This command has 8 possible answers such as yes, no, etc..",
-                "usage": [
-                    {
-                        "description": "Rolls the 8ball and provides a random response.",
-                        "example": "{PREFIX}eightball is yono the best bot"
-                    }
-                ],
-                "responses": [
-                    "It is certain.",
-                    "It is decidedly so.",
-                    "Without a doubt.",
-                    "Yes definitely.",
-                    "As I see it, yes.",
-                    "Most likely.",
-                    "Outlook good.",
-                    "Yes.",
-                    "Signs point to yes.",
-                    "Reply hazy try again.",
-                    "Ask again later.",
-                    "Better not tell you now.",
-                    "Cannot predict now.",
-                    "Concentrate and ask again.",
-                    "Don't count on it.",
-                    "My reply is no.",
-                    "Outlook not so good.",
-                    "Very doubtful.",
-                    "No way.",
-                    "Maybe",
-                    "No.",
-                    "||No||",
-                    "||Yes||",
-                    "Hang on",
-                    "It's over",
-                    "It's just the beginning"
-                ],
-                "embed": {
-                    "title": "My Reply Is:",
-                    "description": "{EIGHTBALL_RESPONSE} \n> ||This command's only a joke, please do not take it seriously||"
-                }
-            },
-            "advice": {
-                "description": "Gives life/other advice.",
-                "usage": [
-                    {
-                        "description": "Provides advice from an advanced AI",
-                        "usage": "{PREFIX}advice"
-                    }
-                ],
-                "embed": {
-                    "title": "Bot's advice"
-                }
-            },
-            "binary": {
-                "description": "Converts any text written to binary.",
-                "usage": [
-                    {
-                        "description": "Changes the 'hello world' to binary. (Binary e.g. 0101010)",
-                        "example": "{PREFIX}binary hello world"
-                    }
-                ],
-                "errorEmbed": {
-                    "msgTooLong": {
-                        "title": "An error has occured while running this command."
-                    }
-                },
-                "embed": {
-                    "title": "Binary Code"
-                }
-            },
-            "clyde": {
-                "description": "Writes whatever you write but cylde sends it",
-                "usage": [
-                    {
-                        "description": "Types the message in clyde and sends the image, in this case it's 'Discord bot's are pretty cool, especially Yono.'",
-                        "example": "{PREFIX}clyde Discord bot's are pretty cool, especially Yono."
-                    }
-                ],
-                "errorEmbed": {
-                    "unknownError": {
-                        "title": "Error has occured while running this command.",
-                        "description": "The following error has occured: "
-                    }
-                },
-                "embed": {
-                    "title": "Clyde's Response"
-                }
-            },
-            "dice": {
-                "description": "Rolls the dice to get a number between 1-6",
-                "usage": [
-                    {
-                        "description": "Rolls the dice and gives a random number between 1-6",
-                        "example": "{PREFIX}dice"
-                    }
-                ]
-            },
-            "eject": {
-                "description": "Ejects a user",
-                "usage": [
-                    {
-                        "description": "Ejects the mentioned user.",
-                        "example": "{PREFIX}eject @Moonlightt#2222"
-                    },
-                    {
-                        "description": "Ejects the person who ran the command.",
-                        "example": "{PREFIX}eject"
-                    }
-                ],
-                "errorEmbed": {
-                    "unknownError": {
-                        "title": "An error has occured while running this command.",
-                        "description": "The following error has occured while running this command: "
-                    }
-                },
-                "firstMessage": "Generating image...",
-                "embed": {
-                    "title": " has been ejected by: {USER_RAN_COMMAND}"
-                }
-            },
-            "facepalm": {
-                "description": "Puts the image in a facepalm",
-                "usage": [
-                    {
-                        "description": "Generate an image with a facepalm of the mentioned user's avatar",
-                        "example": "{PREFIX}facepalm @Moonlightt#2222"
-                    },
-                    {
-                        "description": "Generates an image with a facepalm of the user that ran the command.",
-                        "example": "{PREFIX}facepalm"
-                    }
-                ],
-                "embed": {
-                    "description": "Generating image..."
-                }
-            },
-            "flipcoin": {
-                "dDescription": "Flips a coin to either land on: Heads or Tails",
-                "usage": [
-                    {
-                        "description": "Flips the coin to get heads or tails.",
-                        "example": "{PREFIX}flipcoin"
-                    }
-                ],
-                "embed": {
-                    "title": "Coin landed",
-                    "description": "The coin has landed on: "
-                }
-            },
-            "iq": {
-                "dDescription": "Gets the iq of the mentioned/given user",
-                "usage": [
-                    {
-                        "description": "Provides iq of the mentioned user",
-                        "example": "{PREFIX}iq @Moonlightt#2222"
-                    },
-                    {
-                        "description": "Provides iq of the user that ran the command.",
-                        "example": "{PREFIX}iq"
-                    }
-                ],
-                "errorEmbed": {
-                    "unknownError": {
-                        "title": "An error has occured while running this command.",
-                        "description": "The following error has occured while running this command: "
-                    }
-                },
-                "embed": {
-                    "title": "Here's the IQ",
-                    "description": "IQ is: "
-                }
-            },
-            "joke": {
-                "description": "Sends a *funny (hopefully)* joke",
-                "usage": [
-                    {
-                        "description": "Gets a *dad* joke and sends it.",
-                        "example": "{PREFIX}joke"
-                    }
-                ],
-                "embed": {
-                    "title": "Random Joke (dad joke)"
-                }
-            },
-            "meme": {
-                "description": "Gets a meme from the r/dankmemes subreddit.",
-                "usage": [
-                    {
-                        "description": "Gets the meme from r/dankmemes then sends it.",
-                        "example": "{PREFIX}meme"
-                    }
-                ],
-                "errorEmbed": {
-                    "nsfw": {
-                        "error": "The following error has occured: NSFW content"
-                    },
-                    "redditForbidden": {
-                        "title": "An error has occured while running this command.",
-                        "description": "This post is either:\n> Private\n> Not Found\n> Deleted"
-                    }
-                }
-            },
-            "tweet": {
-                "description": "Generates a image of a tweet with the message you wrote.",
-                "usage": [
-                    {
-                        "description": "Puts the text that you put into an image tweet.",
-                        "example": "{PREFIX}tweet YonoBot Yono's pretty cool :)"
-                    }
-                ],
-                "noUsernameProvided": "Please enter a username to be put in the tweet",
-                "noTextProvided": "Please enter a text to be put in the tweet",
-                "generatingImage": "Generating Image...",
-                "embed": {
-                    "title": "Twitter Tweet"
-                }
-            }
-        },
-        "other": {
-            "avatar": {
-                "description": "Gets your/or the mentioned user's avatar",
-                "usage": [
-                    {
-                        "description": "Provides the avatar of the mentioned user.",
-                        "example": "{PREFIX}avatar @Moonlightt#2222"
-                    },
-                    {
-                        "description": "Provides the avatar of the user who ran the command.",
-                        "example": "{PREFIX}avatar"
-                    }
-                ]
-            }
-        },
-        "util": {
-            "addemoji": {
-                "description": "Adds the mentioned/given emoji",
-                "usage": [
-                    {
-                        "description": "Adds the emoji",
-                        "example": "{PREFIX}addemoji {EMOJI_DEMO}"
-                    }
-                ],
-                "errorEmbed": {
-                    "title": "Error has occured while running this command.",
-                    "description": "An error has occured while trying to add this emoji, suggested reasons:\n> Emoji Size exceeds 256kB\n> The server has reached the max emoji's limit."
-                },
-                "embed": {
-                    "title": "Emoji has been added.",
-                    "description": "The emoji has been succesfully added, extra information:\n> Emoji Name: "
-                }
-            },
-            "membercount": {
-                "description": "Gets the member count of the current discord server.",
-                "usage": [
-                    {
-                        "description": "Provides the membercount for the current guild",
-                        "example": "{PREFIX}membercount"
-                    }
-                ],
-                "embed": {
-                    "title": "Member count for: ",
-                    "description": "members"
-                }
-            },
-            "reminder": {
-                "description": "Reminds you of a specific thing in the time you specified.",
-                "usage": [
-                    {
-                        "description": "Set a reminder for seconds",
-                        "example": "{PREFIX}reminder 45s go out with friends"
-                    },
-                    {
-                        "description": "Sets a reminder for minutes",
-                        "example": "{PREFIX}reminder 45m start a giveaway with yono"
-                    },
-                    {
-                        "description": "Set a reminder for a hour",
-                        "example": "{PREFIX}reminder 4h start a server requirement giveaway with yono, and setup invite management"
-                    }
-                ],
-                "errorEmbed": {
-                    "invalidFormat": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Invalid Time Format, please make sure that your time ends with `s` for seconds or `m` for minutes or `h` for hours. e.g.\n> `.remind 2h fix bugs"
-                    },
-                    "noText": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Please enter a text that you'll be reminded with. e.g.\n> `.remind 30m create voice event`"
-                    }
-                },
-                "embed": {
-                    "title": "Reminder Created.",
-                    "description": "The reminder has been succesfully created below are the reminder's details:\n> Reminder Text: ",
-                    "descriptionTwo": "Remind In: "
-                }
-            },
-            "say": {
-                "description": "Sends the message you wrote thru the bot.",
-                "usage": [
-                    {
-                        "description": "Sends the message you provided.",
-                        "example": "{PREFIX}say Hello World, Hello Yono"
-                    }
-                ],
-                "errorEmbed": {
-                    "noText": {
-                        "title": "You didn't provide any text",
-                        "description": "Please provide some text so use this command e.g. `{PREFIX}say < text >"
-                    },
-                    "unknownError": {
-                        "title": "An error has occured while running this command."
-                    }
-                }
-            },
-            "weather": {
-                "description": "Gets the country/city's weather",
-                "usage": [
-                    {
-                        "description": "Gets the stats then sends it.",
-                        "example": "{PREFIX}weather New York"
-                    }
-                ],
-                "errorEmbed": {
-                    "countryNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "We couldn't find that city/country, suggested reasons:\n> Incorrect City/Country Name"
-                    }
-                },
-                "embed": {
-                    "title": "Current Weather At: ",
-                    "fields": [
-                        {
-                            "name": "**Timezone**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Degree Type**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Winds**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Temperature**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Weather**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Day**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Date**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Humidity**",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "**Feels like**",
-                            "value": "",
-                            "inline": true
-                        }
-                    ]
-                }
-            },
-            "autoping": {
-                "description": "Pings the member when they join the server then deletes it.",
-                "usage": [
-                    {
-                        "description": "Sets the channel and the time required to delete (s/m)",
-                        "example": "{PREFIX}autoping #general 10s"
-                    }
-                ],
-                "disabled": "The autoping has been disabled.",
-                "argumentsNotProvided": "You need to set the channel and time to delete.\n\nUsage: `{PREFIX}autoping [ Channel ] [ Time for message to be deleted. ]`",
-                "invalidChannel": "The channel you've given was not found. Please make sure you mention the channel or give the channel ID.",
-                "invalidFormat": "Invalid time format. `s/m`",
-                "minTime": "Minimum time for the message to be deleted is 1 second, and max is 1 minute.",
-                "set": "The autoping has been sucessfully set to:"
-            }
-        },
-        "admin": {
-            "addrole": {
-                "description": "Adds the mentioned/given role to the mentioned/given user.",
-                "usage": [
-                    {
-                        "description": "Adds the role to the provided user",
-                        "example": "{PREFIX}addrole @Moonlightt#2222 @Yono Admin [ Reason ]"
-                    }
-                ],
-                "noReasonProvided": "No reason provided.",
-                "roleGivenBy": "Role given by: ",
-                "errorEmbed": {
-                    "alreadyHasRole": {
-                        "title": "An error has occured while running this command.",
-                        "description": "This user already has this role."
-                    },
-                    "higherRole": {
-                        "title": "Error has occured while running this command.",
-                        "description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
-                    }
-                },
-                "embed": {
-                    "title": "Role succesfully added.",
-                    "descriptionOne": "The role has been succesfully added, extra information:\n> Added Role: ",
-                    "descriptionTwo": "\n> Role Given To:"
-                }
-            },
-            "removerole": {
-                "description": "Removes the mentioned/given role from the mentioned/given user.",
-                "usage": [
-                    {
-                        "description": "Removes the role from the provided user",
-                        "example": "{PREFIX}removerole @Moonlightt#2222 @Swagy Admin [ Reason ]"
-                    }
-                ],
-                "noReasonProvided": "No reason provided.",
-                "removedBy": "Role removed by: ",
-                "errorEmbed": {
-                    "alreadyRemoved": {
-                        "title": "Error has occured while running this command.",
-                        "description": "This user does not have this role."
-                    },
-                    "higherRole": {
-                        "title": "Error has occured while running this command.",
-                        "description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
-                    },
-                    "embed": {
-                        "title": "Role succesfully removed.",
-                        "descriptionOne": "The role has been removed, extra information: \n> Removed Role: ",
-                        "descriptionTwo": "\n> Removed From: "
-                    }
-                }
-            },
-            "ban": {
-                "description": "Bans the mentioned/given user from the discord server.",
-                "usage": [
-                    {
-                        "description": "Bans the user that was mentioned (with reason)",
-                        "example": "{PREFIX}ban @Moonlightt#2222 5 warning limit exceeded"
-                    },
-                    {
-                        "description": "Bans the user that was mentioned (without reason)",
-                        "example": "{PREFIX}ban @Moonlightt#2222"
-                    }
-                ],
-                "errorEmbed": {
-                    "notInGuild": {
-                        "title": "Error has occured while running this command.",
-                        "description": "User is not in the guild, suggested reasons:\n> Wrong user ID"
-                    },
-                    "selfBan": {
-                        "title": "Error has occured while running this command.",
-                        "description": "You cannot ban yourself."
-                    },
-                    "cantBan": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Cannot kick this user, suggested reasons:\n> User has more permission than the bot\n> User has a higher role than the bot."
-                    }
-                },
-                "reasonEmbed": {
-                    "title": "Banned.",
-                    "description": " has been banned for "
-                },
-                "noReasonEmbed": {
-                    "title": "Banned.",
-                    "description": " has been banned."
-                }
-            },
-            "unban": {
-                "description": "Revokes a user's ban from the discord server.",
-                "usage": [
-                    {
-                        "description": "Removes the ban from the mentioned user",
-                        "example": "{PREFIX}unban @Moonlightt#2222"
-                    }
-                ],
-                "errorEmbed": {
-                    "userNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "We couldn't find that user, suggest reasons:\n> Wrong Username & Tag\n> Wrong user ID\n> User is not banned."
-                    },
-                    "notBanned": {
-                        "title": "Error has occured while running this command.",
-                        "description": "This user is not banned."
-                    }
-                },
-                "embed": {
-                    "title": "Unbanned.",
-                    "description": " has been unbanned."
-                }
-            },
-            "kick": {
-                "description": "Kicks the mentioned/given user(s) from the discord server.",
-                "usage": [
-                    {
-                        "description": "Kicks the user from the server",
-                        "example": "{PREFIX}kick @Moonlightt#2222"
-                    }
-                ],
-                "errorEmbed": {
-                    "notInGuild": {
-                        "title": "Error has occured while running this command.",
-                        "description": "User is not in the guild, suggested reasons:\n> Wrong user ID"
-                    },
-                    "kickSelf": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Cannot kick this user, suggested reason:\n> User has more permissions than bot\n> User has a higher role than the bot."
-                    },
-                    "higherRole": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Cannot kick this user, suggested reason:\n> User has more permissions than bot\n> User has a higher role than the bot."
-                    },
-                    "cantKickBot": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Cannot kick a bot."
-                    }
-                },
-                "directMessage": {
-                    "descriptionOne": "**You have been kicked from ",
-                    "descriptionTwo": " for - ",
-                    "descriptionThree": "No reason added."
-                },
-                "reasonEmbed": {
-                    "description": " has been kicked from the server for: "
-                },
-                "noReasonEmbed": {
-                    "description": "has been kicked from the server."
-                }
-            },
-            "lock": {
-                "description": "Locks (Disables Chat) the current/mentioned channel(s).",
-                "usage": [
-                    {
-                        "description": "Locks the current channel",
-                        "example": "{PREFIX}lock"
-                    },
-                    {
-                        "description": "Locks the mentioned channel",
-                        "example": "{PREFIX}lock #general"
-                    }
-                ],
-                "errorEmbed": {
-                    "channelNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Couldn't find that channel, suggested reasons:\n> Incorrect Mention\n> ⚠️ This command does not support channel ID"
-                    },
-                    "alreadyLocked": {
-                        "title": "Error has occured while running this command.",
-                        "description": "This channel is already locked."
-                    }
-                },
-                "embed": {
-                    "title": "Locked succesfully.",
-                    "description": " has been locked succesfully by "
-                }
-            },
-            "unlock": {
-                "description": "Unlocks (Allows messages) the current/mentioned channel(s).",
-                "usage": [
-                    {
-                        "description": "Unlocks the current channel",
-                        "example": "{PREFIX}unlock"
-                    },
-                    {
-                        "description": "Unlocks the given channel",
-                        "example": "{PREFIX}unlock #general"
-                    }
-                ],
-                "errorEmbed": {
-                    "channelNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Couldn't find that channel, suggested reasons:\n> Incorrect Mention\n> ⚠️ This command does not support channel ID"
-                    },
-                    "alreadyUnlocked": {
-                        "title": "Error has occured while running this command.",
-                        "description": "This channel is already unlocked."
-                    }
-                },
-                "embed": {
-                    "title": "Unlocked succesfully.",
-                    "description": " has been unlocked succesfully by "
-                }
-            },
-            "mute": {
-                "description": "Mutes the mentioned/given user from the discord server for the specified time.",
-                "usage": [
-                    {
-                        "description": "Adds the muted role to the provided/given user.",
-                        "example": "{PREFIX}mute @Moonlightt#2222 1h"
-                    }
-                ],
-                "errorEmbed": {
-                    "memberNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "The following user doesn't exist, suggested reasons\n> Wrong ID\n> Wrong Name#Tag"
-                    },
-                    "noTimeProvided": {
-                        "title": "Error has occured while running this command.",
-                        "description": "Please provide a time"
-                    },
-                    "alreadyMuted": {
-                        "title": "Error has occured while running this command.",
-                        "description": "This user is already muted."
-                    },
-                    "higherRole": {
-                        "title": "Error has occured while running this command.",
-                        "description": "You cannot mute this user, suggested reasons:\n> This user has a higher role than me"
-                    },
-                    "unknownError": {
-                        "title": "Error has occured while running this command.",
-                        "description": "The following error has occured: "
-                    }
-                },
-                "embed": {
-                    "title": "This user has been muted.",
-                    "description": " has been muted for: ",
-                    "descriptiontwo": " in this server."
-                }
-            },
-            "unmute": {
-                "description": "Unmutes a user from the discord server.",
-                "usage": [
-                    {
-                        "description": "Removes the muted user from the provided user."
-                    }
-                ],
-                "errorEmbed": {
-                    "memberNotFound": {
-                        "title": "Error has occured while running this command.",
-                        "description": "We couldn't find that user, suggested reasons:\n> Wrong ID\n> User isn't in the server."
-                    },
-                    "notMuted": {
-                        "title": "Error has occured while running this command.",
-                        "description": "We couldn't unmute this user, suggested reasons:\n> User is not muted"
-                    },
-                    "embed": {
-                        "title": "Unmuted succesfully.",
-                        "description": "The following user: ",
-                        "descriptiontwo": " has been unmuted from the server."
-                    }
-                }
-            },
-            "purge": {
-                "description": "deletes the specified ammount of messages",
-                "usage": [
-                    {
-                        "description": "Deletes the provided amount of messages",
-                        "example": "{PREFIX}purge 5"
-                    }
-                ],
-                "errorEmbed": {
-                    "notANumber": {
-                        "title": "The following error has occured while running this command.",
-                        "description": "> Please provide a number only."
-                    },
-                    "lowNumber": {
-                        "title": "The following error has occured while running this command.",
-                        "description": "> Please provide a number less than 100"
-                    },
-                    "highNumber": {
-                        "title": "The following error has occured while running this command.",
-                        "description": "Please provide a number more than one."
-                    }
-                },
-                "embed": {
-                    "title": "Deleted succesfully.",
-                    "description": "The following amount: ",
-                    "descriptiontwo": " was succesfully deleted."
-                }
-            },
-            "setslowmode": {
-                "description": "Sets the channel slowmode (allos you to set less than 5 seconds)",
-                "usage": [
-                    {
-                        "description": "Sets the slowmode, allows less than 5 seconds.",
-                        "example": "{PREFIX}setslowmode 2s"
-                    }
-                ],
-                "highNumber": "The slowdown amount has to be less than 6 hours",
-                "errorEmbed": {
-                    "notANumber": {
-                        "title": "The following error has occured while running this command.",
-                        "description": "> Please provide a number only."
-                    }
-                },
-                "embed": {
-                    "slowmodeRemoved": {
-                        "title": "Slowmode has been removed.",
-                        "description": "The slowmode has been succesfully removed from this channel."
-                    },
-                    "set": {
-                        "title": "Slowmode has been set.",
-                        "description": "The slow mode has been succesfully set to:"
-                    }
-                }
-            },
-            "urlprot": {
-                "description": "Deletes any link that is sent to the discord server.",
-                "usage": [
-                    {
-                        "description": "Enables the urlprot for the server",
-                        "example": "{PREFIX}urlprot on"
-                    },
-                    {
-                        "description": "Disables the urlprot for the server",
-                        "example": "{PREFIX}urlprot off"
-                    }
-                ],
-                "argsTooSmall": "Please provide the setting value e.g., {PREFIX}urlprot on",
-                "enabled": "URLPROT is on, users can't send messages that are links in the server.",
-                "urlprotOff": "URLPROT is not on to be disabled.",
-                "disabled": "URLPROT is disabled for this guild."
-            },
-            "autorole": {
-                "description": "Adds the mentioned/given role to the mentioned/given user.",
-                "usage": [
-                    {
-                        "description": "Sets the autorole to enabled and sets the role",
-                        "example": "{PREFIX}autorole on @Member"
-                    },
-                    {
-                        "description": "Sets the autorole to disabled",
-                        "example": "{PREFIX}autorole off"
-                    }
-                ],
-                "errorEmbed": {
-                    "provdeOption": {
-                        "title": "Avaliable Autorole Options",
-                        "description": "To set autorole, you need to give a few information, such as the role that should be given.\n> .autorole < On/Off> [ Role Name (Mandotory if On)]"
-                    },
-                    "invalidOption": {
-                        "title": "Error has occured while running this command",
-                        "description": "The option you provided was invalid! This is the correct usage: .autorole < On/Off> [ Role Name (Mandotory if On)]"
-                    },
-                    "invalidRole": {
-                        "title": "Error has occured while running this command",
-                        "description": "The role that was provided could not be found. Please try again."
-                    },
-                    "higherRole": {
-                        "title": "Error has occured while running this command",
-                        "description": "The role that was provided is too high for me to give. Please try again."
-                    }
-                },
-                "set": "The autorole has been successfully setup for this server."
-            }
-        },
-        "invites": {
-            "invitecodes": {
-                "description": "Get's the user's invitecodes for this server.",
-                "usage": [
-                    {
-                        "description": "Gets the invitecodes of the mentioned user",
-                        "example": "{PREFIX}invitecodes @Moonlightt#2222"
-                    }
-                ],
-                "embed": {
-                    "noInvites": "This member does not have any invitecodes/invites.",
-                    "inviteFor": "{EMOJI_LINK} Invite codes for: ",
-                    "descriptionOne": " Uses: ",
-                    "caseNever": "Never",
-                    "descriptionTwo": " Expires At: "
-                }
-            },
-            "invites": {
-                "description": "Gets the mentioned/given user's invite count for this server.",
-                "usage": [
-                    {
-                        "description": "Gets the invite count of the user that ran the command.",
-                        "example": "{PREFIX}invites"
-                    },
-                    {
-                        "description": "Gets the invite count of the mentioned user",
-                        "example": "{PREFIX}invites @Moonlightt#2222"
-                    }
-                ],
-                "embed": {
-                    "title": "Invite count for: ",
-                    "description": "Total invites: ",
-                    "fields": [
-                        {
-                            "name": "{EMOJI_MEMBERS} Joins",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "{EMOJI_SRVLEAVES} Leaves",
-                            "value": "",
-                            "inline": true
-                        },
-                        {
-                            "name": "{EMOJI_PLUS} Bonus",
-                            "value": "",
-                            "inline": true
-                        }
-                    ],
-                    "footer": "Command used by: "
-                },
-                "leaderboard": {
-                    "description": "Show's the leaderboard for the top invites.",
-                    "usage": [
-                        {
-                            "description": "Shows the leaderboard for the guild.",
-                            "example": "{PREFIX}leaderboard"
-                        }
-                    ],
-                    "notInLeaderboard": "You're not on the leaderboard.",
-                    "embed": {
-                        "title": "Leaderboard for ",
-                        "fieldone": "Your rank: ",
-                        "buttons": {
-                            "first": "First",
-                            "previous": "Previous",
-                            "next": "Next",
-                            "last": "Last"
-                        }
-                    }
-                },
-                "resetsettings": {
-                    "description": "Reset the setting provided.",
-                    "usage": [
-                        {
-                            "description": "Shows the menu, and allows you to reset any setting you want, e.g. Welcome Channel",
-                            "example": "{PREFIX}resetsettings"
-                        }
-                    ],
-                    "buttonError": "These buttons only apply to the person who ran the command.",
-                    "embed": {
-                        "title": "Invite settings",
-                        "description": "Select the buttons below to reset the config settings.\n\nIf the button is grey, it means the setting has been reset or the setting wasn't configured.",
-                        "footer": "Please note that once you press the button, the action is irreverseable.",
-                        "buttons": {
-                            "one": "Welcome Channel",
-                            "two": "Leave Channel",
-                            "three": "Welcome Message",
-                            "four": "Leave Message",
-                            "five": "Done"
-                        }
-                    }
-                },
-                "setbonus": {
-                    "description": "Adds bonus invites to the mentioned/given user.",
-                    "usage": [
-                        {
-                            "description": "Sets bonus to the mentioned user with the provided amount",
-                            "example": "{PREFIX}setbonus @Moonlightt#2222 5"
-                        }
-                    ],
-                    "incorrectUsage": "Incorrect Usage.\n\nCorrect usage: `.setbonus [ user ] [ number ]`",
-                    "incorrectUser": "Please make sure that the member is in this server.",
-                    "invalidNumber": "Please make sure that the amount is a valid integer.",
-                    "lowNumber": "The minimum amount for the bonus is 1.",
-                    "set": "The bonus invites have been added to the user."
-                },
-                "setjoinchannel": {
-                    "description": "Set the channel to greet the member when they join the server",
-                    "usage": [
-                        {
-                            "description": "Sets the join channel to #welcome",
-                            "example": "{PREFIX}setjoinchannel #welcome"
-                        }
-                    ],
-                    "mentionTextChannel": "Mention a text channel to set the join channel.",
-                    "channelNotFound": "The provided channel was not found.",
-                    "notTextChannel": "Please provide text channels only.",
-                    "set": "The join channel has been set to:"
-                },
-                "setjoinmessage": {
-                    "description": "Set the message to greet the member when they join the server",
-                    "usage": [
-                        {
-                            "description": "Provides embed setup, if embed was selected",
-                            "example": "{PREFIX}setjoinmessage"
-                        },
-                        {
-                            "description": "Sets a normal message welcome.",
-                            "example": "{PREFIX}setjoinmessage"
-                        }
-                    ],
-                    "embed": {
-                        "authorText": "This is an author text",
-                        "title": "This is a title",
-                        "description": "This is a description.\n\nUse the buttons below to configure this embed.",
-                        "footerText": "This is a footer text",
-                        "fields": [
-                            {
-                                "name": "This is a field name",
-                                "value": "This is a field description",
-                                "inline": true
-                            }
-                        ],
-                        "buttons": {
-                            "one": "Author text",
-                            "two": "Author icon",
-                            "three": "Title",
-                            "four": "Thumbnail",
-                            "five": "Description",
-                            "six": "Color",
-                            "seven": "New field",
-                            "eight": "Delete last field",
-                            "nine": "Footer text",
-                            "ten": "Footer icon",
-                            "eleven": "Done",
-                            "tweleve": "Cancel."
-                        },
-                        "objects": {
-                            "one": "Type the text that will be added to the author title",
-                            "two": "Type the link that will be added to the author icon",
-                            "three": "Type the text that will be added to the title",
-                            "four": "Type the link that will be added to thumbnail",
-                            "five": "Type the text that will be added to the description",
-                            "six": "Type the color to be added at the side of the embed.",
-                            "seven": "Type the text that will be added to the file",
-                            "eight": "Type the text that will be added to the footer text",
-                            "nine": "Type the link that will be added to the footer icon"
-                        }
-                    },
-                    "cancelled": "Embed builder has been cancelled.",
-                    "typeError": "Cannot read undefined object",
-                    "256CharMax": "Please enter text shorter than 256 characters.",
-                    "3000CharMax": "Please enter text shorter than 3000 characters.",
-                    "authorImgHasToBeLink": "Author image has to be a link.",
-                    "invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
-                    "invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
-                    "fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
-                    "footerImgHasToBeLink": "Footer icon has to be a link.",
-                    "thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
-                    "cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
-                    "cancelled_RerunPopupTwo": "leavemsg",
-                    "buttonError": "These buttons only apply to the person who ran the command.",
-                    "cancelTitle": "Embed builder canceled",
-                    "cancelDescription": "This action has been canceled",
-                    "variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
-                    "variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
-                    "tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
-                    "option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
-                    "textWrite": "Write the message.",
-                    "1000CharMax": "Please provide text less than 1000 characters.",
-                    "set": "The embed has been set up, and will be sent when a user leaves.",
-                    "textSet": "Leave message has been set."
-                },
-                "setleavechannel": {
-                    "description": "Set the channel to announce if the member has left the server.",
-                    "usage": [
-                        {
-                            "description": "Sets the leave channel to #byebye",
-                            "example": "{PREFIX}setleavechannel #byebye"
-                        }
-                    ],
-                    "mentionTextChannel": "Mention a text channel to set the leave channel.",
-                    "channelNotFound": "The provided channel was not found.",
-                    "notTextChannel": "Please provide text channels only.",
-                    "set": "The leave channel has been set to:"
-                },
-                "setleavemessage": {
-                    "description": "Set the message to announce that the member has left the server",
-                    "usage": [
-                        {
-                            "description": "Provides embed setup, if embed was selected",
-                            "example": "{PREFIX}setleavesmessage"
-                        },
-                        {
-                            "description": "Sets a normal message for leave.",
-                            "example": "{PREFIX}setleavemessage"
-                        }
-                    ],
-                    "embed": {
-                        "authorText": "This is an author text",
-                        "title": "This is a title",
-                        "description": "This is a description.\n\nUse the buttons below to configure this embed.",
-                        "footerText": "This is a footer text",
-                        "fields": [
-                            {
-                                "name": "This is a field name",
-                                "value": "This is a field description",
-                                "inline": true
-                            }
-                        ],
-                        "buttons": {
-                            "one": "Author text",
-                            "two": "Author icon",
-                            "three": "Title",
-                            "four": "Thumbnail",
-                            "five": "Description",
-                            "six": "Color",
-                            "seven": "New field",
-                            "eight": "Delete last field",
-                            "nine": "Footer text",
-                            "ten": "Footer icon",
-                            "eleven": "Done",
-                            "tweleve": "Cancel."
-                        },
-                        "objects": {
-                            "one": "Type the text that will be added to the author title",
-                            "two": "Type the link that will be added to the author icon",
-                            "three": "Type the text that will be added to the title",
-                            "four": "Type the link that will be added to thumbnail",
-                            "five": "Type the text that will be added to the description",
-                            "six": "Type the color to be added at the side of the embed.",
-                            "seven": "Type the text that will be added to the file",
-                            "eight": "Type the text that will be added to the footer text",
-                            "nine": "Type the link that will be added to the footer icon"
-                        }
-                    },
-                    "cancelled": "Embed builder has been cancelled.",
-                    "typeError": "Cannot read undefined object",
-                    "256CharMax": "Please enter text shorter than 256 characters.",
-                    "3000CharMax": "Please enter text shorter than 3000 characters.",
-                    "authorImgHasToBeLink": "Author image has to be a link.",
-                    "invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
-                    "invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
-                    "fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
-                    "footerImgHasToBeLink": "Footer icon has to be a link.",
-                    "thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
-                    "cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
-                    "cancelled_RerunPopupTwo": "leavemsg",
-                    "buttonError": "These buttons only apply to the person who ran the command.",
-                    "cancelTitle": "Embed builder canceled",
-                    "cancelDescription": "This action has been canceled",
-                    "variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
-                    "variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
-                    "tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
-                    "option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
-                    "textWrite": "Write the message.",
-                    "1000CharMax": "Please provide text less than 1000 characters.",
-                    "set": "The embed has been set up, and will be sent when a user leaves.",
-                    "textSet": "Leave message has been set."
-                },
-                "viewsettings": {
-                    "description": "View's the selected setting.",
-                    "usage": [
-                        {
-                            "description": "Shows the button menu for the user to select what setting to view.",
-                            "example": "{PREFIX}viewsettings"
-                        }
-                    ],
-                    "buttonError": "These buttons only apply to the person who ran the command.",
-                    "embed": {
-                        "title": "Invite settings",
-                        "description": "Select what setting you want to view.",
-                        "buttons": {
-                            "one": "Welcome Channel",
-                            "two": "Leave Channel",
-                            "three": "Welcome Message",
-                            "four": "Leave Message",
-                            "five": "Done"
-                        },
-                        "case": {
-                            "welcomechannel": "Welcome message channel: ",
-                            "leavechannel": "Leave message channel: ",
-                            "welcomemessage": "Welcome message content: ",
-                            "leavemessage": "Leave message content: "
-                        }
-                    }
-                }
-            }
-        },
-        "giveaways": {
-            "create": {
-                "description": "Creates a giveaway in the server",
-                "usage": [
-                    {
-                        "description": "Setups the giveaway, then confirms it.",
-                        "example": "{PREFIX}create"
-                    }
-                ],
-                "invalidTimeFormat": "Invalid format, please provide a correct format",
-                "minimiumTime": "The minimum giveaway time is 1 minute, and the maximum is 14 days",
-                "channelNotFound": "Channel not found, please try again.",
-                "notTextChannel": "The channel you provided is not a text channel, please make sure its a text channel.",
-                "prizeMsgTooLong": "Prize message is too long, please decrease the prize message.",
-                "insentValidNum": "Please insert a valid number.",
-                "minimumWinners": "The minimum amount of winners is 1, and the maximum is 20.",
-                "descriptionTooLong": "Description is too long, please decrease the description.",
-                "serverNotFound": "Server was not found, make sure that you provide the server invite, then server ID first. Not fixed? Make sure the bot is in the other guild.",
-                "notGg": "Invalid invite format, please make sure it includes: `discord.gg/`, or `discord.com/invite`",
-                "invalidRole": "Invalid role: ",
-                "invalidResponse_RoleEntries": "Invalid response. Example response: `roleB - 2, roleA - 4`",
-                "roleNotFoundOne": "Role ",
-                "roleNotFoundTwo": "  not found! Please try again.",
-                "tooLong": "You took too long to respond, the giveaway creation has been canceled.",
-                "questions": {
-                    "one": "What is the time limit on your giveaway? s/m/h/d",
-                    "two": "Which channel should the giveaway message be posted?",
-                    "three": "Which channel should the giveaway message be posted?",
-                    "four": "How many winners should there be for this giveaway?",
-                    "five": "What is the description of the giveaway? (Type N to skip)",
-                    "six": "What are the required guild to be joined? Send the server ID then link. (Type N to skip)",
-                    "sixextra": "Okay, now please enter the server link.",
-                    "seven": "What are the required roles to have? (Type N to skip)",
-                    "eight": "What roles have more enteries then other? (Type N to skip)"
-                },
-                "embed": {
-                    "title": "Giveaway Message",
-                    "descriptionOne": "Please ensure that the following details are correct:\n\nPrize: ",
-                    "descriptionTwo": "\nChannel: ",
-                    "descriptionThree": "\nEnds at: ",
-                    "descriptionFour": "\nDescription: ",
-                    "descriptionFourElse": "\nNone",
-                    "descriptionFive": "\n\nRequirements:\n - Server to join: ",
-                    "descriptionSix": "\n - Roles required: ",
-                    "descriptionSeven": "\n\nAdditional Entries: ",
-                    "confirmButton": "Press the button to confirm"
-                }
-            },
-            "list": {
-                "description": "Sends a list of active giveaway in the server.",
-                "usage": [
-                    {
-                        "description": "Gets the list of giveaways then sends it.",
-                        "example": "{PREFIX}list"
-                    }
-                ],
-                "embed": {
-                    "title": "Active Giveaways",
-                    "noActiveDescription": "No active giveaways.",
-                    "description": "\nEnds at: "
-                }
-            },
-            "reroll": {
-                "description": "Rerolls a winner for a giveaway.",
-                "usage": [
-                    {
-                        "description": "Rolls the giveaway of the provided ID",
-                        "example": "{PREFIX}reroll 960984131687305216"
-                    }
-                ],
-                "noMsgId": "You need to give the message id.\nUsage: .reroll [ message id ]",
-                "notFound": "Giveaway not found, please make sure you insert a valid Giveaway ID and to be in the same channel as the giveaway message.",
-                "notEnded": "This giveaway has not been ended yet.",
-                "noReactions": "No one reacted to the giveaway.",
-                "msgOne": "A new winner has been rolled! Congratulations ",
-                "msgTwo": ", you have won",
-                "msgThree": "\n\nGiveaway Message: "
-            },
-            "stop": {
-                "description": "Stops a giveaway in the server.",
-                "usage": [
-                    {
-                        "description": "Stops the giveaway of the provided ID",
-                        "example": "{PREFIX}end 960984131687305216"
-                    }
-                ],
-                "noMsgId": "You need to give the message id.\nUsage: .stop [ message id ]",
-                "invalidGw": "Invalid Giveaway ID, please make sure to provide the correct giveaway ID.",
-                "ending": "Ending giveaway..."
->>>>>>> 44e18dead48d5e8e8f1f6d9191ddc10d84dbd5eb
-            }
-          ]
-        }
-      },
-      "ping": {
-        "description": "Gets the bot's ms/ping",
-        "usage": [
-          {
-            "description": "Get the bot's latency/API latency",
-            "example": "{PREFIX}ping"
-          }
-        ],
-        "embed": {
-          "title": "🏓 Pong!",
-          "fields": [
-            {
-              "name": "Latency",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "API Latency",
-              "value": "",
-              "inline": true
-            }
-          ]
-        }
-      },
-      "serverinfo": {
-        "description": "Gets the server information such as, Owner, User Count, etc..",
-        "usage": [
-          {
-            "description": "Provides all the server information.",
-            "example": "{PREFIX}serverinfo"
-          }
-        ],
-        "embed": {
-          "title": "Information on: {GUILD_NAME}",
-          "fields": [
-            {
-              "name": "Owner",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "Server ID",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "Members",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "Description",
-              "value": "",
-              "inline": false
-            },
-            {
-              "name": "Emojis",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "Boosts",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "Verification",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "Creation Date",
-              "value": "",
-              "inline": false
-            }
-          ]
-        }
-      },
-      "support": {
-        "description": "Gives information on how you can contact us",
-        "usage": [
-          {
-            "description": "Provides support links, and contact",
-            "example": "{PREFIX}support"
-          }
-        ],
-        "embed": {
-          "title": "Yono Support Methods",
-          "description": "{EMOJIS_INFO} Need help? check out our discord server or website for help:",
-          "fields": [
-            {
-              "name": "Discord server:",
-              "value": "[Join Support Server](https://yonobot.us/support)",
-              "inline": true
-            },
-            {
-              "name": "Website:",
-              "value": "[Checkout Yono's website](https://yonobot.us)",
-              "inline": true
-            },
-            {
-              "name": "Email Contact:",
-              "value": "[support@yonobot.us](mailto:support@yonobot.us)",
-              "inline": false
-            }
-          ]
-        }
-      }
-    },
-    "fun": {
-      "eightball": {
-        "description": "This command has 8 possible answers such as yes, no, etc..",
-        "usage": [
-          {
-            "description": "Rolls the 8ball and provides a random response.",
-            "example": "{PREFIX}eightball is yono the best bot"
-          }
-        ],
-        "responses": [
-          "It is certain.",
-          "It is decidedly so.",
-          "Without a doubt.",
-          "Yes definitely.",
-          "As I see it, yes.",
-          "Most likely.",
-          "Outlook good.",
-          "Yes.",
-          "Signs point to yes.",
-          "Reply hazy try again.",
-          "Ask again later.",
-          "Better not tell you now.",
-          "Cannot predict now.",
-          "Concentrate and ask again.",
-          "Don't count on it.",
-          "My reply is no.",
-          "Outlook not so good.",
-          "Very doubtful.",
-          "No way.",
-          "Maybe",
-          "No.",
-          "||No||",
-          "||Yes||",
-          "Hang on",
-          "It's over",
-          "It's just the beginning"
-        ],
-        "embed": {
-          "title": "My Reply Is:",
-          "description": "{EIGHTBALL_RESPONSE} \n> ||This command's only a joke, please do not take it seriously||"
-        }
-      },
-      "advice": {
-        "description": "Gives life/other advice.",
-        "usage": [
-          {
-            "description": "Provides advice from an advanced AI",
-            "usage": "{PREFIX}advice"
-          }
-        ],
-        "firstMessage": "Getting advice...",
-        "embed": {
-          "title": "Bot's advice"
-        }
-      },
-      "binary": {
-        "description": "Converts any text written to binary.",
-        "usage": [
-          {
-            "description": "Changes the 'hello world' to binary. (Binary e.g. 0101010)",
-            "example": "{PREFIX}binary hello world"
-          }
-        ],
-        "errorEmbed": {
-          "msgTooLong": {
-            "title": "An error has occured while running this command."
-          }
-        },
-        "embed": {
-          "title": "Binary Code"
-        }
-      },
-      "clyde": {
-        "description": "Writes whatever you write but cylde sends it",
-        "usage": [
-          {
-            "description": "Types the message in clyde and sends the image, in this case it's 'Discord bot's are pretty cool, especially Yono.'",
-            "example": "{PREFIX}clyde Discord bot's are pretty cool, especially Yono."
-          }
-        ],
-        "errorEmbed": {
-          "unknownError": {
-            "title": "Error has occured while running this command.",
-            "description": "The following error has occured: "
-          }
-        },
-        "embed": {
-          "title": "Clyde's Response"
-        }
-      },
-      "dice": {
-        "description": "Rolls the dice to get a number between 1-6",
-        "usage": [
-          {
-            "description": "Rolls the dice and gives a random number between 1-6",
-            "example": "{PREFIX}dice"
-          }
-        ],
-        "embed": {
-            "title": " The dice has rolled: "
-        }
-      },
-      "eject": {
-        "description": "Ejects a user",
-        "usage": [
-          {
-            "description": "Ejects the mentioned user.",
-            "example": "{PREFIX}eject @Moonlightt#2222"
-          },
-          {
-            "description": "Ejects the person who ran the command.",
-            "example": "{PREFIX}eject"
-          }
-        ],
-        "errorEmbed": {
-          "unknownError": {
-            "title": "An error has occured while running this command.",
-            "description": "The following error has occured while running this command: "
-          }
-        },
-        "firstMessage": "Generating image...",
-        "embed": {
-          "title": " has been ejected by: {USER_RAN_COMMAND}"
-        }
-      },
-      "facepalm": {
-        "description": "Puts the image in a facepalm",
-        "usage": [
-          {
-            "description": "Generate an image with a facepalm of the mentioned user's avatar",
-            "example": "{PREFIX}facepalm @Moonlightt#2222"
-          },
-          {
-            "description": "Generates an image with a facepalm of the user that ran the command.",
-            "example": "{PREFIX}facepalm"
-          }
-        ],
-        "embed": {
-          "description": "Generating image..."
-        }
-      },
-      "flipcoin": {
-        "dDescription": "Flips a coin to either land on: Heads or Tails",
-        "usage": [
-          {
-            "description": "Flips the coin to get heads or tails.",
-            "example": "{PREFIX}flipcoin"
-          }
-        ],
-        "embed": {
-          "title": "Coin landed",
-          "description": "The coin has landed on: "
-        }
-      },
-      "iq": {
-        "dDescription": "Gets the iq of the mentioned/given user",
-        "usage": [
-          {
-            "description": "Provides iq of the mentioned user",
-            "example": "{PREFIX}iq @Moonlightt#2222"
-          },
-          {
-            "description": "Provides iq of the user that ran the command.",
-            "example": "{PREFIX}iq"
-          }
-        ],
-        "errorEmbed": {
-          "unknownError": {
-            "title": "An error has occured while running this command.",
-            "description": "The following error has occured while running this command: "
-          }
-        },
-        "embed": {
-          "title": "Here's the IQ",
-          "description": "IQ is: "
-        }
-      },
-      "joke": {
-        "description": "Sends a *funny (hopefully)* joke",
-        "usage": [
-          {
-            "description": "Gets a *dad* joke and sends it.",
-            "example": "{PREFIX}joke"
-          }
-        ],
-        "embed": {
-          "title": "Random Joke (dad joke)"
-        }
-      },
-      "meme": {
-        "description": "Gets a meme from the r/dankmemes subreddit.",
-        "usage": [
-          {
-            "description": "Gets the meme from r/dankmemes then sends it.",
-            "example": "{PREFIX}meme"
-          }
-        ],
-        "errorEmbed": {
-          "nsfw": {
-            "error": "The following error has occured: NSFW content"
-          },
-          "redditForbidden": {
-            "title": "An error has occured while running this command.",
-            "description": "This post is either:\n> Private\n> Not Found\n> Deleted"
-          }
-        }
-      },
-      "tweet": {
-        "description": "Generates a image of a tweet with the message you wrote.",
-        "usage": [
-          {
-            "description": "Puts the text that you put into an image tweet.",
-            "example": "{PREFIX}tweet YonoBot Yono's pretty cool :)"
-          }
-        ],
-        "noUsernameProvided": "Please enter a username to be put in the tweet",
-        "noTextProvided": "Please enter a text to be put in the tweet",
-        "generatingImage": "Generating Image...",
-        "embed": {
-          "title": "Twitter Tweet"
-        }
-      }
-    },
-    "other": {
-      "avatar": {
-        "description": "Gets your/or the mentioned user's avatar",
-        "usage": [
-          {
-            "description": "Provides the avatar of the mentioned user.",
-            "example": "{PREFIX}avatar @Moonlightt#2222"
-          },
-          {
-            "description": "Provides the avatar of the user who ran the command.",
-            "example": "{PREFIX}avatar"
-          }
-        ]
-      }
-    },
-    "util": {
-      "addemoji": {
-        "description": "Adds the mentioned/given emoji",
-        "usage": [
-          {
-            "description": "Adds the emoji",
-            "example": "{PREFIX}addemoji {EMOJI_DEMO}"
-          }
-        ],
-        "errorEmbed": {
-          "title": "Error has occured while running this command.",
-          "description": "An error has occured while trying to add this emoji, suggested reasons:\n> Emoji Size exceeds 256kB\n> The server has reached the max emoji's limit."
-        },
-        "embed": {
-          "title": "Emoji has been added.",
-          "description": "The emoji has been succesfully added, extra information:\n> Emoji Name: "
-        }
-      },
-      "membercount": {
-        "description": "Gets the member count of the current discord server.",
-        "usage": [
-          {
-            "description": "Provides the membercount for the current guild",
-            "example": "{PREFIX}membercount"
-          }
-        ],
-        "embed": {
-          "title": "Member count for: ",
-          "description": "members"
-        }
-      },
-      "reminder": {
-        "description": "Reminds you of a specific thing in the time you specified.",
-        "usage": [
-          {
-            "description": "Set a reminder for seconds",
-            "example": "{PREFIX}reminder 45s go out with friends"
-          },
-          {
-            "description": "Sets a reminder for minutes",
-            "example": "{PREFIX}reminder 45m start a giveaway with yono"
-          },
-          {
-            "description": "Set a reminder for a hour",
-            "example": "{PREFIX}reminder 4h start a server requirement giveaway with yono, and setup invite management"
-          }
-        ],
-        "errorEmbed": {
-          "invalidFormat": {
-            "title": "Error has occured while running this command.",
-            "description": "Invalid Time Format, please make sure that your time ends with `s` for seconds or `m` for minutes or `h` for hours. e.g.\n> `.remind 2h fix bugs"
-          },
-          "noText": {
-            "title": "Error has occured while running this command.",
-            "description": "Please enter a text that you'll be reminded with. e.g.\n> `.remind 30m create voice event`"
-          }
-        },
-        "embed": {
-          "title": "Reminder Created.",
-          "description": "The reminder has been succesfully created below are the reminder's details:\n> Reminder Text: ",
-          "descriptionTwo": "Remind In: "
-        }
-      },
-      "say": {
-        "description": "Sends the message you wrote thru the bot.",
-        "usage": [
-          {
-            "description": "Sends the message you provided.",
-            "example": "{PREFIX}say Hello World, Hello Yono"
-          }
-        ],
-        "errorEmbed": {
-          "noText": {
-            "title": "You didn't provide any text",
-            "description": "Please provide some text so use this command e.g. `{PREFIX}say < text >"
-          },
-          "unknownError": {
-            "title": "An error has occured while running this command."
-          }
-        }
-      },
-      "weather": {
-        "description": "Gets the country/city's weather",
-        "usage": [
-          {
-            "description": "Gets the stats then sends it.",
-            "example": "{PREFIX}weather New York"
-          }
-        ],
-        "errorEmbed": {
-          "countryNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "We couldn't find that city/country, suggested reasons:\n> Incorrect City/Country Name"
-          }
-        },
-        "embed": {
-          "title": "Current Weather At: ",
-          "fields": [
-            {
-              "name": "**Timezone**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Degree Type**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Winds**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Temperature**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Weather**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Day**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Date**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Humidity**",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "**Feels like**",
-              "value": "",
-              "inline": true
-            }
-          ]
-        }
-      },
-      "autoping": {
-        "description": "Pings the member when they join the server then deletes it.",
-        "usage": [
-          {
-            "description": "Sets the channel and the time required to delete (s/m)",
-            "example": "{PREFIX}autoping #general 10s"
-          }
-        ],
-        "disabled": "The autoping has been disabled.",
-        "argumentsNotProvided": "You need to set the channel and time to delete.\n\nUsage: `{PREFIX}autoping [ Channel ] [ Time for message to be deleted. ]`",
-        "invalidChannel": "The channel you've given was not found. Please make sure you mention the channel or give the channel ID.",
-        "invalidFormat": "Invalid time format. `s/m`",
-        "minTime": "Minimum time for the message to be deleted is 1 second, and max is 1 minute.",
-        "set": "The autoping has been sucessfully set to:"
-      }
-    },
-    "admin": {
-      "addrole": {
-        "description": "Adds the mentioned/given role to the mentioned/given user.",
-        "usage": [
-          {
-            "description": "Adds the role to the provided user",
-            "example": "{PREFIX}addrole @Moonlightt#2222 @Yono Admin [ Reason ]"
-          }
-        ],
-        "noReasonProvided": "No reason provided.",
-        "roleGivenBy": "Role given by: ",
-        "errorEmbed": {
-          "alreadyHasRole": {
-            "title": "An error has occured while running this command.",
-            "description": "This user already has this role."
-          },
-          "higherRole": {
-            "title": "Error has occured while running this command.",
-            "description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
-          }
-        },
-        "embed": {
-          "title": "Role succesfully added.",
-          "descriptionOne": "The role has been succesfully added, extra information:\n> Added Role: ",
-          "descriptionTwo": "\n> Role Given To:"
-        }
-      },
-      "removerole": {
-        "description": "Removes the mentioned/given role from the mentioned/given user.",
-        "usage": [
-          {
-            "description": "Removes the role from the provided user",
-            "example": "{PREFIX}removerole @Moonlightt#2222 @Swagy Admin [ Reason ]"
-          }
-        ],
-        "noReasonProvided": "No reason provided.",
-        "removedBy": "Role removed by: ",
-        "errorEmbed": {
-          "alreadyRemoved": {
-            "title": "Error has occured while running this command.",
-            "description": "This user does not have this role."
-          },
-          "higherRole": {
-            "title": "Error has occured while running this command.",
-            "description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
-          },
-          "embed": {
-            "title": "Role succesfully removed.",
-            "descriptionOne": "The role has been removed, extra information: \n> Removed Role: ",
-            "descriptionTwo": "\n> Removed From: "
-          }
-        }
-      },
-      "ban": {
-        "description": "Bans the mentioned/given user from the discord server.",
-        "usage": [
-          {
-            "description": "Bans the user that was mentioned (with reason)",
-            "example": "{PREFIX}ban @Moonlightt#2222 5 warning limit exceeded"
-          },
-          {
-            "description": "Bans the user that was mentioned (without reason)",
-            "example": "{PREFIX}ban @Moonlightt#2222"
-          }
-        ],
-        "errorEmbed": {
-          "notInGuild": {
-            "title": "Error has occured while running this command.",
-            "description": "User is not in the guild, suggested reasons:\n> Wrong user ID"
-          },
-          "selfBan": {
-            "title": "Error has occured while running this command.",
-            "description": "You cannot ban yourself."
-          },
-          "cantBan": {
-            "title": "Error has occured while running this command.",
-            "description": "Cannot kick this user, suggested reasons:\n> User has more permission than the bot\n> User has a higher role than the bot."
-          }
-        },
-        "reasonEmbed": {
-          "title": "Banned.",
-          "description": " has been banned for "
-        },
-        "noReasonEmbed": {
-          "title": "Banned.",
-          "description": " has been banned."
-        }
-      },
-      "unban": {
-        "description": "Revokes a user's ban from the discord server.",
-        "usage": [
-          {
-            "description": "Removes the ban from the mentioned user",
-            "example": "{PREFIX}unban @Moonlightt#2222"
-          }
-        ],
-        "errorEmbed": {
-          "userNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "We couldn't find that user, suggest reasons:\n> Wrong Username & Tag\n> Wrong user ID\n> User is not banned."
-          },
-          "notBanned": {
-            "title": "Error has occured while running this command.",
-            "description": "This user is not banned."
-          }
-        },
-        "embed": {
-          "title": "Unbanned.",
-          "description": " has been unbanned."
-        }
-      },
-      "kick": {
-        "description": "Kicks the mentioned/given user(s) from the discord server.",
-        "usage": [
-          {
-            "description": "Kicks the user from the server",
-            "example": "{PREFIX}kick @Moonlightt#2222"
-          }
-        ],
-        "errorEmbed": {
-          "notInGuild": {
-            "title": "Error has occured while running this command.",
-            "description": "User is not in the guild, suggested reasons:\n> Wrong user ID"
-          },
-          "kickSelf": {
-            "title": "Error has occured while running this command.",
-            "description": "Cannot kick this user, suggested reason:\n> User has more permissions than bot\n> User has a higher role than the bot."
-          },
-          "higherRole": {
-            "title": "Error has occured while running this command.",
-            "description": "Cannot kick this user, suggested reason:\n> User has more permissions than bot\n> User has a higher role than the bot."
-          },
-          "cantKickBot": {
-            "title": "Error has occured while running this command.",
-            "description": "Cannot kick a bot."
-          }
-        },
-        "directMessage": {
-          "descriptionOne": "**You have been kicked from ",
-          "descriptionTwo": " for - ",
-          "descriptionThree": "No reason added."
-        },
-        "reasonEmbed": {
-          "description": " has been kicked from the server for: "
-        },
-        "noReasonEmbed": {
-          "description": "has been kicked from the server."
-        }
-      },
-      "lock": {
-        "description": "Locks (Disables Chat) the current/mentioned channel(s).",
-        "usage": [
-          {
-            "description": "Locks the current channel",
-            "example": "{PREFIX}lock"
-          },
-          {
-            "description": "Locks the mentioned channel",
-            "example": "{PREFIX}lock #general"
-          }
-        ],
-        "errorEmbed": {
-          "channelNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "Couldn't find that channel, suggested reasons:\n> Incorrect Mention\n> ⚠️ This command does not support channel ID"
-          },
-          "alreadyLocked": {
-            "title": "Error has occured while running this command.",
-            "description": "This channel is already locked."
-          }
-        },
-        "embed": {
-          "title": "Locked succesfully.",
-          "description": " has been locked succesfully by "
-        }
-      },
-      "unlock": {
-        "description": "Unlocks (Allows messages) the current/mentioned channel(s).",
-        "usage": [
-          {
-            "description": "Unlocks the current channel",
-            "example": "{PREFIX}unlock"
-          },
-          {
-            "description": "Unlocks the given channel",
-            "example": "{PREFIX}unlock #general"
-          }
-        ],
-        "errorEmbed": {
-          "channelNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "Couldn't find that channel, suggested reasons:\n> Incorrect Mention\n> ⚠️ This command does not support channel ID"
-          },
-          "alreadyUnlocked": {
-            "title": "Error has occured while running this command.",
-            "description": "This channel is already unlocked."
-          }
-        },
-        "embed": {
-          "title": "Unlocked succesfully.",
-          "description": " has been unlocked succesfully by "
-        }
-      },
-      "mute": {
-        "description": "Mutes the mentioned/given user from the discord server for the specified time.",
-        "usage": [
-          {
-            "description": "Adds the muted role to the provided/given user.",
-            "example": "{PREFIX}mute @Moonlightt#2222 1h"
-          }
-        ],
-        "errorEmbed": {
-          "memberNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "The following user doesn't exist, suggested reasons\n> Wrong ID\n> Wrong Name#Tag"
-          },
-          "noTimeProvided": {
-            "title": "Error has occured while running this command.",
-            "description": "Please provide a time"
-          },
-          "alreadyMuted": {
-            "title": "Error has occured while running this command.",
-            "description": "This user is already muted."
-          },
-          "higherRole": {
-            "title": "Error has occured while running this command.",
-            "description": "You cannot mute this user, suggested reasons:\n> This user has a higher role than me"
-          },
-          "unknownError": {
-            "title": "Error has occured while running this command.",
-            "description": "The following error has occured: "
-          }
-        },
-        "embed": {
-          "title": "This user has been muted.",
-          "description": " has been muted for: ",
-          "descriptiontwo": " in this server."
-        }
-      },
-      "unmute": {
-        "description": "Unmutes a user from the discord server.",
-        "usage": [
-          {
-            "description": "Removes the muted user from the provided user."
-          }
-        ],
-        "errorEmbed": {
-          "memberNotFound": {
-            "title": "Error has occured while running this command.",
-            "description": "We couldn't find that user, suggested reasons:\n> Wrong ID\n> User isn't in the server."
-          },
-          "notMuted": {
-            "title": "Error has occured while running this command.",
-            "description": "We couldn't unmute this user, suggested reasons:\n> User is not muted"
-          }
-        },
-        "embed": {
-          "title": "Unmuted succesfully.",
-          "description": "The following user: ",
-          "descriptiontwo": " has been unmuted from the server."
-        }
-      },
-      "purge": {
-        "description": "deletes the specified ammount of messages",
-        "usage": [
-          {
-            "description": "Deletes the provided amount of messages",
-            "example": "{PREFIX}purge 5"
-          }
-        ],
-        "errorEmbed": {
-          "notANumber": {
-            "title": "The following error has occured while running this command.",
-            "description": "> Please provide a number only."
-          },
-          "lowNumber": {
-            "title": "The following error has occured while running this command.",
-            "description": "> Please provide a number less than 100"
-          },
-          "highNumber": {
-            "title": "The following error has occured while running this command.",
-            "description": "Please provide a number more than one."
-          }
-        },
-        "embed": {
-          "title": "Deleted succesfully.",
-          "description": "The following amount: ",
-          "descriptiontwo": " was succesfully deleted."
-        }
-      },
-      "setslowmode": {
-        "description": "Sets the channel slowmode (allos you to set less than 5 seconds)",
-        "usage": [
-          {
-            "description": "Sets the slowmode, allows less than 5 seconds.",
-            "example": "{PREFIX}setslowmode 2s"
-          }
-        ],
-        "highNumber": "The slowdown amount has to be less than 6 hours",
-        "errorEmbed": {
-          "notANumber": {
-            "title": "The following error has occured while running this command.",
-            "description": "> Please provide a number only."
-          }
-        },
-        "embed": {
-          "slowmodeRemoved": {
-            "title": "Slowmode has been removed.",
-            "description": "The slowmode has been succesfully removed from this channel."
-          },
-          "set": {
-            "title": "Slowmode has been set.",
-            "description": "The slow mode has been succesfully set to:"
-          }
-        }
-      },
-      "urlprot": {
-        "description": "Deletes any link that is sent to the discord server.",
-        "usage": [
-          {
-            "description": "Enables the urlprot for the server",
-            "example": "{PREFIX}urlprot on"
-          },
-          {
-            "description": "Disables the urlprot for the server",
-            "example": "{PREFIX}urlprot off"
-          }
-        ],
-        "argsTooSmall": "Please provide the setting value e.g., {PREFIX}urlprot on",
-        "enabled": "URLPROT is on, users can't send messages that are links in the server.",
-        "urlprotOff": "URLPROT is not on to be disabled.",
-        "disabled": "URLPROT is disabled for this guild."
-      },
-      "autorole": {
-        "description": "Adds the mentioned/given role to the mentioned/given user.",
-        "usage": [
-          {
-            "description": "Sets the autorole to enabled and sets the role",
-            "example": "{PREFIX}autorole on @Member"
-          },
-          {
-            "description": "Sets the autorole to disabled",
-            "example": "{PREFIX}autorole off"
-          }
-        ],
-        "errorEmbed": {
-          "provdeOption": {
-            "title": "Avaliable Autorole Options",
-            "description": "To set autorole, you need to give a few information, such as the role that should be given.\n> .autorole < On/Off> [ Role Name (Mandotory if On)]"
-          },
-          "invalidOption": {
-            "title": "Error has occured while running this command",
-            "description": "The option you provided was invalid! This is the correct usage: .autorole < On/Off> [ Role Name (Mandotory if On)]"
-          },
-          "invalidRole": {
-            "title": "Error has occured while running this command",
-            "description": "The role that was provided could not be found. Please try again."
-          },
-          "higherRole": {
-            "title": "Error has occured while running this command",
-            "description": "The role that was provided is too high for me to give. Please try again."
-          }
-        },
-        "set": "The autorole has been successfully setup for this server."
-      }
-    },
-    "invites": {
-      "invitecodes": {
-        "description": "Get's the user's invitecodes for this server.",
-        "usage": [
-          {
-            "description": "Gets the invitecodes of the mentioned user",
-            "example": "{PREFIX}invitecodes @Moonlightt#2222"
-          }
-        ],
-        "embed": {
-          "noInvites": "This member does not have any invitecodes/invites.",
-          "inviteFor": "{EMOJI_LINK} Invite codes for: ",
-          "descriptionOne": " Uses: ",
-          "caseNever": "Never",
-          "descriptionTwo": " Expires At: "
-        }
-      },
-      "invites": {
-        "description": "Gets the mentioned/given user's invite count for this server.",
-        "usage": [
-          {
-            "description": "Gets the invite count of the user that ran the command.",
-            "example": "{PREFIX}invites"
-          },
-          {
-            "description": "Gets the invite count of the mentioned user",
-            "example": "{PREFIX}invites @Moonlightt#2222"
-          }
-        ],
-        "embed": {
-          "title": "Invite count for: ",
-          "description": "Total invites: ",
-          "fields": [
-            {
-              "name": "{EMOJI_MEMBERS} Joins",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "{EMOJI_SRVLEAVES} Leaves",
-              "value": "",
-              "inline": true
-            },
-            {
-              "name": "{EMOJI_PLUS} Bonus",
-              "value": "",
-              "inline": true
-            }
-          ],
-          "footer": "Command used by: "
-        },
-        "leaderboard": {
-          "description": "Show's the leaderboard for the top invites.",
-          "usage": [
-            {
-              "description": "Shows the leaderboard for the guild.",
-              "example": "{PREFIX}leaderboard"
-            }
-          ],
-          "notInLeaderboard": "You're not on the leaderboard.",
-          "embed": {
-            "title": "Leaderboard for ",
-            "fieldone": "Your rank: ",
-            "buttons": {
-              "first": "First",
-              "previous": "Previous",
-              "next": "Next",
-              "last": "Last"
-            }
-          }
-        },
-        "resetsettings": {
-          "description": "Reset the setting provided.",
-          "usage": [
-            {
-              "description": "Shows the menu, and allows you to reset any setting you want, e.g. Welcome Channel",
-              "example": "{PREFIX}resetsettings"
-            }
-          ],
-          "buttonError": "These buttons only apply to the person who ran the command.",
-          "embed": {
-            "title": "Invite settings",
-            "description": "Select the buttons below to reset the config settings.\n\nIf the button is grey, it means the setting has been reset or the setting wasn't configured.",
-            "footer": "Please note that once you press the button, the action is irreverseable.",
-            "buttons": {
-              "one": "Welcome Channel",
-              "two": "Leave Channel",
-              "three": "Welcome Message",
-              "four": "Leave Message",
-              "five": "Done"
-            }
-          }
-        },
-        "setbonus": {
-          "description": "Adds bonus invites to the mentioned/given user.",
-          "usage": [
-            {
-              "description": "Sets bonus to the mentioned user with the provided amount",
-              "example": "{PREFIX}setbonus @Moonlightt#2222 5"
-            }
-          ],
-          "incorrectUsage": "Incorrect Usage.\n\nCorrect usage: `.setbonus [ user ] [ number ]`",
-          "incorrectUser": "Please make sure that the member is in this server.",
-          "invalidNumber": "Please make sure that the amount is a valid integer.",
-          "lowNumber": "The minimum amount for the bonus is 1.",
-          "set": "The bonus invites have been added to the user."
-        },
-        "setjoinchannel": {
-          "description": "Set the channel to greet the member when they join the server",
-          "usage": [
-            {
-              "description": "Sets the join channel to #welcome",
-              "example": "{PREFIX}setjoinchannel #welcome"
-            }
-          ],
-          "mentionTextChannel": "Mention a text channel to set the join channel.",
-          "channelNotFound": "The provided channel was not found.",
-          "notTextChannel": "Please provide text channels only.",
-          "set": "The join channel has been set to:"
-        },
-        "setjoinmessage": {
-          "description": "Set the message to greet the member when they join the server",
-          "usage": [
-            {
-              "description": "Provides embed setup, if embed was selected",
-              "example": "{PREFIX}setjoinmessage"
-            },
-            {
-              "description": "Sets a normal message welcome.",
-              "example": "{PREFIX}setjoinmessage"
-            }
-          ],
-          "embed": {
-            "authorText": "This is an author text",
-            "title": "This is a title",
-            "description": "This is a description.\n\nUse the buttons below to configure this embed.",
-            "footerText": "This is a footer text",
-            "fields": [
-              {
-                "name": "This is a field name",
-                "value": "This is a field description",
-                "inline": true
-              }
-            ],
-            "buttons": {
-              "one": "Author text",
-              "two": "Author icon",
-              "three": "Title",
-              "four": "Thumbnail",
-              "five": "Description",
-              "six": "Color",
-              "seven": "New field",
-              "eight": "Delete last field",
-              "nine": "Footer text",
-              "ten": "Footer icon",
-              "eleven": "Done",
-              "tweleve": "Cancel."
-            },
-            "objects": {
-              "one": "Type the text that will be added to the author title",
-              "two": "Type the link that will be added to the author icon",
-              "three": "Type the text that will be added to the title",
-              "four": "Type the link that will be added to thumbnail",
-              "five": "Type the text that will be added to the description",
-              "six": "Type the color to be added at the side of the embed.",
-              "seven": "Type the text that will be added to the file",
-              "eight": "Type the text that will be added to the footer text",
-              "nine": "Type the link that will be added to the footer icon"
-            }
-          },
-          "cancelled": "Embed builder has been cancelled.",
-          "typeError": "Cannot read undefined object",
-          "256CharMax": "Please enter text shorter than 256 characters.",
-          "3000CharMax": "Please enter text shorter than 3000 characters.",
-          "authorImgHasToBeLink": "Author image has to be a link.",
-          "invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
-          "invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
-          "fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
-          "footerImgHasToBeLink": "Footer icon has to be a link.",
-          "thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
-          "cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
-          "cancelled_RerunPopupTwo": "leavemsg",
-          "buttonError": "These buttons only apply to the person who ran the command.",
-          "cancelTitle": "Embed builder canceled",
-          "cancelDescription": "This action has been canceled",
-          "variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
-          "variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
-          "tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
-          "option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
-          "textWrite": "Write the message.",
-          "1000CharMax": "Please provide text less than 1000 characters.",
-          "set": "The embed has been set up, and will be sent when a user leaves.",
-          "textSet": "Leave message has been set."
-        },
-        "setleavechannel": {
-          "description": "Set the channel to announce if the member has left the server.",
-          "usage": [
-            {
-              "description": "Sets the leave channel to #byebye",
-              "example": "{PREFIX}setleavechannel #byebye"
-            }
-          ],
-          "mentionTextChannel": "Mention a text channel to set the leave channel.",
-          "channelNotFound": "The provided channel was not found.",
-          "notTextChannel": "Please provide text channels only.",
-          "set": "The leave channel has been set to:"
-        },
-        "setleavemessage": {
-          "description": "Set the message to announce that the member has left the server",
-          "usage": [
-            {
-              "description": "Provides embed setup, if embed was selected",
-              "example": "{PREFIX}setleavesmessage"
-            },
-            {
-              "description": "Sets a normal message for leave.",
-              "example": "{PREFIX}setleavemessage"
-            }
-          ],
-          "embed": {
-            "authorText": "This is an author text",
-            "title": "This is a title",
-            "description": "This is a description.\n\nUse the buttons below to configure this embed.",
-            "footerText": "This is a footer text",
-            "fields": [
-              {
-                "name": "This is a field name",
-                "value": "This is a field description",
-                "inline": true
-              }
-            ],
-            "buttons": {
-              "one": "Author text",
-              "two": "Author icon",
-              "three": "Title",
-              "four": "Thumbnail",
-              "five": "Description",
-              "six": "Color",
-              "seven": "New field",
-              "eight": "Delete last field",
-              "nine": "Footer text",
-              "ten": "Footer icon",
-              "eleven": "Done",
-              "tweleve": "Cancel."
-            },
-            "objects": {
-              "one": "Type the text that will be added to the author title",
-              "two": "Type the link that will be added to the author icon",
-              "three": "Type the text that will be added to the title",
-              "four": "Type the link that will be added to thumbnail",
-              "five": "Type the text that will be added to the description",
-              "six": "Type the color to be added at the side of the embed.",
-              "seven": "Type the text that will be added to the file",
-              "eight": "Type the text that will be added to the footer text",
-              "nine": "Type the link that will be added to the footer icon"
-            }
-          },
-          "cancelled": "Embed builder has been cancelled.",
-          "typeError": "Cannot read undefined object",
-          "256CharMax": "Please enter text shorter than 256 characters.",
-          "3000CharMax": "Please enter text shorter than 3000 characters.",
-          "authorImgHasToBeLink": "Author image has to be a link.",
-          "invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
-          "invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
-          "fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
-          "footerImgHasToBeLink": "Footer icon has to be a link.",
-          "thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
-          "cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
-          "cancelled_RerunPopupTwo": "leavemsg",
-          "buttonError": "These buttons only apply to the person who ran the command.",
-          "cancelTitle": "Embed builder canceled",
-          "cancelDescription": "This action has been canceled",
-          "variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
-          "variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
-          "tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
-          "option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
-          "textWrite": "Write the message.",
-          "1000CharMax": "Please provide text less than 1000 characters.",
-          "set": "The embed has been set up, and will be sent when a user leaves.",
-          "textSet": "Leave message has been set."
-        },
-        "viewsettings": {
-          "description": "View's the selected setting.",
-          "usage": [
-            {
-              "description": "Shows the button menu for the user to select what setting to view.",
-              "example": "{PREFIX}viewsettings"
-            }
-          ],
-          "buttonError": "These buttons only apply to the person who ran the command.",
-          "embed": {
-            "title": "Invite settings",
-            "description": "Select what setting you want to view.",
-            "buttons": {
-              "one": "Welcome Channel",
-              "two": "Leave Channel",
-              "three": "Welcome Message",
-              "four": "Leave Message",
-              "five": "Done"
-            },
-            "case": {
-              "welcomechannel": "Welcome message channel: ",
-              "leavechannel": "Leave message channel: ",
-              "welcomemessage": "Welcome message content: ",
-              "leavemessage": "Leave message content: "
-            }
-          }
-        }
-      }
-    },
-    "giveaways": {
-      "create": {
-        "description": "Creates a giveaway in the server",
-        "usage": [
-          {
-            "description": "Setups the giveaway, then confirms it.",
-            "example": "{PREFIX}create"
-          }
-        ],
-        "invalidTimeFormat": "Invalid format, please provide a correct format",
-        "minimiumTime": "The minimum giveaway time is 1 minute, and the maximum is 14 days",
-        "channelNotFound": "Channel not found, please try again.",
-        "notTextChannel": "The channel you provided is not a text channel, please make sure its a text channel.",
-        "prizeMsgTooLong": "Prize message is too long, please decrease the prize message.",
-        "insentValidNum": "Please insert a valid number.",
-        "minimumWinners": "The minimum amount of winners is 1, and the maximum is 20.",
-        "descriptionTooLong": "Description is too long, please decrease the description.",
-        "serverNotFound": "Server was not found, make sure that you provide the server invite, then server ID first. Not fixed? Make sure the bot is in the other guild.",
-        "notGg": "Invalid invite format, please make sure it includes: `discord.gg/`, or `discord.com/invite`",
-        "invalidRole": "Invalid role: ",
-        "invalidResponse_RoleEntries": "Invalid response. Example response: `roleB - 2, roleA - 4`",
-        "roleNotFoundOne": "Role ",
-        "roleNotFoundTwo": "  not found! Please try again.",
-        "tooLong": "You took too long to respond, the giveaway creation has been canceled.",
-        "questions": {
-          "one": "What is the time limit on your giveaway? s/m/h/d",
-          "two": "Which channel should the giveaway message be posted?",
-          "three": "Which channel should the giveaway message be posted?",
-          "four": "How many winners should there be for this giveaway?",
-          "five": "What is the description of the giveaway? (Type N to skip)",
-          "six": "What are the required guild to be joined? Send the server ID then link. (Type N to skip)",
-          "sixextra": "Okay, now please enter the server link.",
-          "seven": "What are the required roles to have? (Type N to skip)",
-          "eight": "What roles have more enteries then other? (Type N to skip)"
-        },
-        "embed": {
-          "title": "Giveaway Message",
-          "descriptionOne": "Please ensure that the following details are correct:\n\nPrize: ",
-          "descriptionTwo": "\nChannel: ",
-          "descriptionThree": "\nEnds at: ",
-          "descriptionFour": "\nDescription: ",
-          "descriptionFourElse": "\nNone",
-          "descriptionFive": "\n\nRequirements:\n - Server to join: ",
-          "descriptionSix": "\n - Roles required: ",
-          "descriptionSeven": "\n\nAdditional Entries: ",
-          "confirmButton": "Press the button to confirm"
-        }
-      },
-      "list": {
-        "description": "Sends a list of active giveaway in the server.",
-        "usage": [
-          {
-            "description": "Gets the list of giveaways then sends it.",
-            "example": "{PREFIX}list"
-          }
-        ],
-        "noActiveDescription": "No active giveaways.",
-        "embed": {
-          "title": "Active Giveaways",
-          "description": "\nEnds at: "
-        }
-      },
-      "reroll": {
-        "description": "Rerolls a winner for a giveaway.",
-        "usage": [
-          {
-            "description": "Rolls the giveaway of the provided ID",
-            "example": "{PREFIX}reroll 960984131687305216"
-          }
-        ],
-        "noMsgId": "You need to give the message id.\nUsage: .reroll [ message id ]",
-        "notFound": "Giveaway not found, please make sure you insert a valid Giveaway ID and to be in the same channel as the giveaway message.",
-        "notEnded": "This giveaway has not been ended yet.",
-        "noReactions": "No one reacted to the giveaway.",
-        "msgOne": "A new winner has been rolled! Congratulations ",
-        "msgTwo": ", you have won",
-        "msgThree": "\n\nGiveaway Message: "
-      },
-      "stop": {
-        "description": "Stops a giveaway in the server.",
-        "usage": [
-          {
-            "description": "Stops the giveaway of the provided ID",
-            "example": "{PREFIX}end 960984131687305216"
-          }
-        ],
-        "noMsgId": "You need to give the message id.\nUsage: .stop [ message id ]",
-        "invalidGw": "Invalid Giveaway ID, please make sure to provide the correct giveaway ID.",
-        "ending": "Ending giveaway..."
-      }
-    }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 44e18dead48d5e8e8f1f6d9191ddc10d84dbd5eb
+	"langShortName": "en_US",
+	"langLongName": "English",
+	"langLocale": "US",
+	"commands": {
+		"info": {
+			"help": {
+				"description": "Shows the help page which has all the information about the commands or about a specific command.",
+				"usage": [
+					{
+						"description": "Provides information about all of the bot's commands.",
+						"example": "{PREFIX}help"
+					},
+					{
+						"description": "Provides help and information about the specified command.",
+						"example": "{PREFIX}help ban"
+					}
+				],
+				"errorEmbed": {
+					"cmdNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "No information found for the following command: "
+					}
+				},
+				"embed": {
+					"title": "Yono Help Command",
+					"descriptionDefault": "**Help Menu | Yono** Information, Support, and Commands\n{EMOJI_SUPPORT} **Information** :: Provides general & informative commands for bot, such as help, ping and many other commands.\n{EMOJI_MODERATION} **Moderation** :: Every server needs moderation commands, keeping the server safe is a priority.\n{EMOJI_UTIL} **Utility** :: Utility commands could come handy sometimes.\n {EMOJI_FUN} **Fun & Images** :: Fun commands are needed always.\n {EMOJI_GIVEAWAYS} **Giveaways** :: Create giveaways for your members, weather its with requirements or not.\n {EMOJI_MEMBER} **Invite Management** :: Track the invites and set welcome messages and more.\n {EMOJI_MUSIC} **Music** :: Play music from different platforms such as spotify\n{EMOJI_SUPPORT} **Yono** bot is a multi purpose bot made for everyone, Yono (You only need one). Need help? Run the `{PREFIX}support` command to get support/contact links.",
+					"descriptionOne": "**Help Menu | Yono** Information, Support, and Commands\n{EMOJI_INFO} **Yono** bot is a multi purpose bot made for everyone, Yono (You only need one). Need help? Run the `{PREFIX}support` command to get support/contact links.:"
+				},
+				"cmdEmbed": {
+					"fields": [
+						{
+							"name": "**Command Name**",
+							"value": "{COMMAND_NAME}",
+							"inline": true
+						},
+						{
+							"name": "**Command Description**",
+							"value": "{COMMAND_DESCRIPTION}",
+							"inline": true
+						},
+						{
+							"name": "**Cooldown**",
+							"value": "{COMMAND_COOLDOWN}",
+							"inline": true
+						},
+						{
+							"name": "**Usage**",
+							"value": "{COMMAND_USAGE}",
+							"inline": true
+						},
+						{
+							"name": "**Required Permissions**",
+							"value": "{COMMAND_MEMBERPERMISSIONS}",
+							"inline": true
+						}
+					]
+				}
+			},
+			"ping": {
+				"description": "Gets the bot's ms/ping",
+				"usage": [
+					{
+						"description": "Get the bot's latency/API latency",
+						"example": "{PREFIX}ping"
+					}
+				],
+				"embed": {
+					"title": "🏓 Pong!",
+					"fields": [
+						{
+							"name": "Latency",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "API Latency",
+							"value": "",
+							"inline": true
+						}
+					]
+				}
+			},
+			"serverinfo": {
+				"description": "Gets the server information such as, Owner, User Count, etc..",
+				"usage": [
+					{
+						"description": "Provides all the server information.",
+						"example": "{PREFIX}serverinfo"
+					}
+				],
+				"embed": {
+					"title": "Information on: {GUILD_NAME}",
+					"fields": [
+						{
+							"name": "Owner",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Server ID",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Members",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Description",
+							"value": "",
+							"inline": false
+						},
+						{
+							"name": "Emojis",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Boosts",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Verification",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Creation Date",
+							"value": "",
+							"inline": false
+						}
+					]
+				}
+			},
+			"support": {
+				"description": "Gives information on how you can contact us",
+				"usage": [
+					{
+						"description": "Provides support links, and contact",
+						"example": "{PREFIX}support"
+					}
+				],
+				"embed": {
+					"title": "Yono Support Methods",
+					"description": "{EMOJIS_INFO} Need help? check out our discord server or website for help:",
+					"fields": [
+						{
+							"name": "Discord server:",
+							"value": "[Join Support Server](https://yonobot.us/support)",
+							"inline": true
+						},
+						{
+							"name": "Website:",
+							"value": "[Checkout Yono's website](https://yonobot.us)",
+							"inline": true
+						},
+						{
+							"name": "Email Contact:",
+							"value": "[support@yonobot.us](mailto:support@yonobot.us)",
+							"inline": false
+						}
+					]
+				}
+			}
+		},
+		"fun": {
+			"eightball": {
+				"description": "This command has 8 possible answers such as yes, no, etc..",
+				"usage": [
+					{
+						"description": "Rolls the 8ball and provides a random response.",
+						"example": "{PREFIX}eightball is yono the best bot"
+					}
+				],
+				"responses": [
+					"It is certain.",
+					"It is decidedly so.",
+					"Without a doubt.",
+					"Yes definitely.",
+					"As I see it, yes.",
+					"Most likely.",
+					"Outlook good.",
+					"Yes.",
+					"Signs point to yes.",
+					"Reply hazy try again.",
+					"Ask again later.",
+					"Better not tell you now.",
+					"Cannot predict now.",
+					"Concentrate and ask again.",
+					"Don't count on it.",
+					"My reply is no.",
+					"Outlook not so good.",
+					"Very doubtful.",
+					"No way.",
+					"Maybe",
+					"No.",
+					"||No||",
+					"||Yes||",
+					"Hang on",
+					"It's over",
+					"It's just the beginning"
+				],
+				"embed": {
+					"title": "My Reply Is:",
+					"description": "{EIGHTBALL_RESPONSE} \n> ||This command's only a joke, please do not take it seriously||"
+				}
+			},
+			"advice": {
+				"description": "Gives life/other advice.",
+				"usage": [
+					{
+						"description": "Provides advice from an advanced AI",
+						"usage": "{PREFIX}advice"
+					}
+				],
+				"firstMessage": "Getting advice...",
+				"embed": {
+					"title": "Bot's advice"
+				}
+			},
+			"binary": {
+				"description": "Converts any text written to binary.",
+				"usage": [
+					{
+						"description": "Changes the 'hello world' to binary. (Binary e.g. 0101010)",
+						"example": "{PREFIX}binary hello world"
+					}
+				],
+				"errorEmbed": {
+					"msgTooLong": {
+						"title": "An error has occured while running this command."
+					}
+				},
+				"embed": {
+					"title": "Binary Code"
+				}
+			},
+			"clyde": {
+				"description": "Writes whatever you write but cylde sends it",
+				"usage": [
+					{
+						"description": "Types the message in clyde and sends the image, in this case it's 'Discord bot's are pretty cool, especially Yono.'",
+						"example": "{PREFIX}clyde Discord bot's are pretty cool, especially Yono."
+					}
+				],
+				"errorEmbed": {
+					"unknownError": {
+						"title": "Error has occured while running this command.",
+						"description": "The following error has occured: "
+					}
+				},
+				"embed": {
+					"title": "Clyde's Response"
+				}
+			},
+			"dice": {
+				"description": "Rolls the dice to get a number between 1-6",
+				"usage": [
+					{
+						"description": "Rolls the dice and gives a random number between 1-6",
+						"example": "{PREFIX}dice"
+					}
+				],
+				"embed": {
+					"title": " The dice has rolled: "
+				}
+			},
+			"eject": {
+				"description": "Ejects a user",
+				"usage": [
+					{
+						"description": "Ejects the mentioned user.",
+						"example": "{PREFIX}eject @Moonlightt#2222"
+					},
+					{
+						"description": "Ejects the person who ran the command.",
+						"example": "{PREFIX}eject"
+					}
+				],
+				"errorEmbed": {
+					"unknownError": {
+						"title": "An error has occured while running this command.",
+						"description": "The following error has occured while running this command: "
+					}
+				},
+				"firstMessage": "Generating image...",
+				"embed": {
+					"title": " has been ejected by: {USER_RAN_COMMAND}"
+				}
+			},
+			"facepalm": {
+				"description": "Puts the image in a facepalm",
+				"usage": [
+					{
+						"description": "Generate an image with a facepalm of the mentioned user's avatar",
+						"example": "{PREFIX}facepalm @Moonlightt#2222"
+					},
+					{
+						"description": "Generates an image with a facepalm of the user that ran the command.",
+						"example": "{PREFIX}facepalm"
+					}
+				],
+				"embed": {
+					"description": "Generating image..."
+				}
+			},
+			"flipcoin": {
+				"dDescription": "Flips a coin to either land on: Heads or Tails",
+				"usage": [
+					{
+						"description": "Flips the coin to get heads or tails.",
+						"example": "{PREFIX}flipcoin"
+					}
+				],
+				"embed": {
+					"title": "Coin landed",
+					"description": "The coin has landed on: "
+				}
+			},
+			"iq": {
+				"dDescription": "Gets the iq of the mentioned/given user",
+				"usage": [
+					{
+						"description": "Provides iq of the mentioned user",
+						"example": "{PREFIX}iq @Moonlightt#2222"
+					},
+					{
+						"description": "Provides iq of the user that ran the command.",
+						"example": "{PREFIX}iq"
+					}
+				],
+				"errorEmbed": {
+					"unknownError": {
+						"title": "An error has occured while running this command.",
+						"description": "The following error has occured while running this command: "
+					}
+				},
+				"embed": {
+					"title": "Here's the IQ",
+					"description": "IQ is: "
+				}
+			},
+			"joke": {
+				"description": "Sends a *funny (hopefully)* joke",
+				"usage": [
+					{
+						"description": "Gets a *dad* joke and sends it.",
+						"example": "{PREFIX}joke"
+					}
+				],
+				"embed": {
+					"title": "Random Joke (dad joke)"
+				}
+			},
+			"meme": {
+				"description": "Gets a meme from the r/dankmemes subreddit.",
+				"usage": [
+					{
+						"description": "Gets the meme from r/dankmemes then sends it.",
+						"example": "{PREFIX}meme"
+					}
+				],
+				"errorEmbed": {
+					"nsfw": {
+						"error": "The following error has occured: NSFW content"
+					},
+					"redditForbidden": {
+						"title": "An error has occured while running this command.",
+						"description": "This post is either:\n> Private\n> Not Found\n> Deleted"
+					}
+				}
+			},
+			"tweet": {
+				"description": "Generates a image of a tweet with the message you wrote.",
+				"usage": [
+					{
+						"description": "Puts the text that you put into an image tweet.",
+						"example": "{PREFIX}tweet YonoBot Yono's pretty cool :)"
+					}
+				],
+				"noUsernameProvided": "Please enter a username to be put in the tweet",
+				"noTextProvided": "Please enter a text to be put in the tweet",
+				"generatingImage": "Generating Image...",
+				"embed": {
+					"title": "Twitter Tweet"
+				}
+			}
+		},
+		"other": {
+			"avatar": {
+				"description": "Gets your/or the mentioned user's avatar",
+				"usage": [
+					{
+						"description": "Provides the avatar of the mentioned user.",
+						"example": "{PREFIX}avatar @Moonlightt#2222"
+					},
+					{
+						"description": "Provides the avatar of the user who ran the command.",
+						"example": "{PREFIX}avatar"
+					}
+				]
+			}
+		},
+		"util": {
+			"addemoji": {
+				"description": "Adds the mentioned/given emoji",
+				"usage": [
+					{
+						"description": "Adds the emoji",
+						"example": "{PREFIX}addemoji {EMOJI_DEMO}"
+					}
+				],
+				"errorEmbed": {
+					"title": "Error has occured while running this command.",
+					"description": "An error has occured while trying to add this emoji, suggested reasons:\n> Emoji Size exceeds 256kB\n> The server has reached the max emoji's limit."
+				},
+				"embed": {
+					"title": "Emoji has been added.",
+					"description": "The emoji has been succesfully added, extra information:\n> Emoji Name: "
+				}
+			},
+			"membercount": {
+				"description": "Gets the member count of the current discord server.",
+				"usage": [
+					{
+						"description": "Provides the membercount for the current guild",
+						"example": "{PREFIX}membercount"
+					}
+				],
+				"embed": {
+					"title": "Member count for: ",
+					"description": "members"
+				}
+			},
+			"reminder": {
+				"description": "Reminds you of a specific thing in the time you specified.",
+				"usage": [
+					{
+						"description": "Set a reminder for seconds",
+						"example": "{PREFIX}reminder 45s go out with friends"
+					},
+					{
+						"description": "Sets a reminder for minutes",
+						"example": "{PREFIX}reminder 45m start a giveaway with yono"
+					},
+					{
+						"description": "Set a reminder for a hour",
+						"example": "{PREFIX}reminder 4h start a server requirement giveaway with yono, and setup invite management"
+					}
+				],
+				"errorEmbed": {
+					"invalidFormat": {
+						"title": "Error has occured while running this command.",
+						"description": "Invalid Time Format, please make sure that your time ends with `s` for seconds or `m` for minutes or `h` for hours. e.g.\n> `.remind 2h fix bugs"
+					},
+					"noText": {
+						"title": "Error has occured while running this command.",
+						"description": "Please enter a text that you'll be reminded with. e.g.\n> `.remind 30m create voice event`"
+					}
+				},
+				"embed": {
+					"title": "Reminder Created.",
+					"description": "The reminder has been succesfully created below are the reminder's details:\n> Reminder Text: ",
+					"descriptionTwo": "Remind In: "
+				}
+			},
+			"say": {
+				"description": "Sends the message you wrote thru the bot.",
+				"usage": [
+					{
+						"description": "Sends the message you provided.",
+						"example": "{PREFIX}say Hello World, Hello Yono"
+					}
+				],
+				"errorEmbed": {
+					"noText": {
+						"title": "You didn't provide any text",
+						"description": "Please provide some text so use this command e.g. `{PREFIX}say < text >"
+					},
+					"unknownError": {
+						"title": "An error has occured while running this command."
+					}
+				}
+			},
+			"weather": {
+				"description": "Gets the country/city's weather",
+				"usage": [
+					{
+						"description": "Gets the stats then sends it.",
+						"example": "{PREFIX}weather New York"
+					}
+				],
+				"errorEmbed": {
+					"countryNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "We couldn't find that city/country, suggested reasons:\n> Incorrect City/Country Name"
+					}
+				},
+				"embed": {
+					"title": "Current Weather At: ",
+					"fields": [
+						{
+							"name": "**Timezone**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Degree Type**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Winds**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Temperature**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Weather**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Day**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Date**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Humidity**",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "**Feels like**",
+							"value": "",
+							"inline": true
+						}
+					]
+				}
+			},
+			"autoping": {
+				"description": "Pings the member when they join the server then deletes it.",
+				"usage": [
+					{
+						"description": "Sets the channel and the time required to delete (s/m)",
+						"example": "{PREFIX}autoping #general 10s"
+					}
+				],
+				"disabled": "The autoping has been disabled.",
+				"argumentsNotProvided": "You need to set the channel and time to delete.\n\nUsage: `{PREFIX}autoping [ Channel ] [ Time for message to be deleted. ]`",
+				"invalidChannel": "The channel you've given was not found. Please make sure you mention the channel or give the channel ID.",
+				"invalidFormat": "Invalid time format. `s/m`",
+				"minTime": "Minimum time for the message to be deleted is 1 second, and max is 1 minute.",
+				"set": "The autoping has been sucessfully set to:"
+			}
+		},
+		"admin": {
+			"addrole": {
+				"description": "Adds the mentioned/given role to the mentioned/given user.",
+				"usage": [
+					{
+						"description": "Adds the role to the provided user",
+						"example": "{PREFIX}addrole @Moonlightt#2222 @Yono Admin [ Reason ]"
+					}
+				],
+				"noReasonProvided": "No reason provided.",
+				"roleGivenBy": "Role given by: ",
+				"errorEmbed": {
+					"alreadyHasRole": {
+						"title": "An error has occured while running this command.",
+						"description": "This user already has this role."
+					},
+					"higherRole": {
+						"title": "Error has occured while running this command.",
+						"description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
+					}
+				},
+				"embed": {
+					"title": "Role succesfully added.",
+					"descriptionOne": "The role has been succesfully added, extra information:\n> Added Role: ",
+					"descriptionTwo": "\n> Role Given To:"
+				}
+			},
+			"removerole": {
+				"description": "Removes the mentioned/given role from the mentioned/given user.",
+				"usage": [
+					{
+						"description": "Removes the role from the provided user",
+						"example": "{PREFIX}removerole @Moonlightt#2222 @Swagy Admin [ Reason ]"
+					}
+				],
+				"noReasonProvided": "No reason provided.",
+				"removedBy": "Role removed by: ",
+				"errorEmbed": {
+					"alreadyRemoved": {
+						"title": "Error has occured while running this command.",
+						"description": "This user does not have this role."
+					},
+					"higherRole": {
+						"title": "Error has occured while running this command.",
+						"description": "An error has occured while adding role(s) to this user, suggested reasons:\n> User has higher role"
+					},
+					"embed": {
+						"title": "Role succesfully removed.",
+						"descriptionOne": "The role has been removed, extra information: \n> Removed Role: ",
+						"descriptionTwo": "\n> Removed From: "
+					}
+				}
+			},
+			"ban": {
+				"description": "Bans the mentioned/given user from the discord server.",
+				"usage": [
+					{
+						"description": "Bans the user that was mentioned (with reason)",
+						"example": "{PREFIX}ban @Moonlightt#2222 5 warning limit exceeded"
+					},
+					{
+						"description": "Bans the user that was mentioned (without reason)",
+						"example": "{PREFIX}ban @Moonlightt#2222"
+					}
+				],
+				"errorEmbed": {
+					"notInGuild": {
+						"title": "Error has occured while running this command.",
+						"description": "User is not in the guild, suggested reasons:\n> Wrong user ID"
+					},
+					"selfBan": {
+						"title": "Error has occured while running this command.",
+						"description": "You cannot ban yourself."
+					},
+					"cantBan": {
+						"title": "Error has occured while running this command.",
+						"description": "Cannot kick this user, suggested reasons:\n> User has more permission than the bot\n> User has a higher role than the bot."
+					}
+				},
+				"reasonEmbed": {
+					"title": "Banned.",
+					"description": " has been banned for "
+				},
+				"noReasonEmbed": {
+					"title": "Banned.",
+					"description": " has been banned."
+				}
+			},
+			"unban": {
+				"description": "Revokes a user's ban from the discord server.",
+				"usage": [
+					{
+						"description": "Removes the ban from the mentioned user",
+						"example": "{PREFIX}unban @Moonlightt#2222"
+					}
+				],
+				"errorEmbed": {
+					"userNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "We couldn't find that user, suggest reasons:\n> Wrong Username & Tag\n> Wrong user ID\n> User is not banned."
+					},
+					"notBanned": {
+						"title": "Error has occured while running this command.",
+						"description": "This user is not banned."
+					}
+				},
+				"embed": {
+					"title": "Unbanned.",
+					"description": " has been unbanned."
+				}
+			},
+			"kick": {
+				"description": "Kicks the mentioned/given user(s) from the discord server.",
+				"usage": [
+					{
+						"description": "Kicks the user from the server",
+						"example": "{PREFIX}kick @Moonlightt#2222"
+					}
+				],
+				"errorEmbed": {
+					"notInGuild": {
+						"title": "Error has occured while running this command.",
+						"description": "User is not in the guild, suggested reasons:\n> Wrong user ID"
+					},
+					"kickSelf": {
+						"title": "Error has occured while running this command.",
+						"description": "Cannot kick this user, suggested reason:\n> User has more permissions than bot\n> User has a higher role than the bot."
+					},
+					"higherRole": {
+						"title": "Error has occured while running this command.",
+						"description": "Cannot kick this user, suggested reason:\n> User has more permissions than bot\n> User has a higher role than the bot."
+					},
+					"cantKickBot": {
+						"title": "Error has occured while running this command.",
+						"description": "Cannot kick a bot."
+					}
+				},
+				"directMessage": {
+					"descriptionOne": "**You have been kicked from ",
+					"descriptionTwo": " for - ",
+					"descriptionThree": "No reason added."
+				},
+				"reasonEmbed": {
+					"description": " has been kicked from the server for: "
+				},
+				"noReasonEmbed": {
+					"description": "has been kicked from the server."
+				}
+			},
+			"lock": {
+				"description": "Locks (Disables Chat) the current/mentioned channel(s).",
+				"usage": [
+					{
+						"description": "Locks the current channel",
+						"example": "{PREFIX}lock"
+					},
+					{
+						"description": "Locks the mentioned channel",
+						"example": "{PREFIX}lock #general"
+					}
+				],
+				"errorEmbed": {
+					"channelNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "Couldn't find that channel, suggested reasons:\n> Incorrect Mention\n> ⚠️ This command does not support channel ID"
+					},
+					"alreadyLocked": {
+						"title": "Error has occured while running this command.",
+						"description": "This channel is already locked."
+					}
+				},
+				"embed": {
+					"title": "Locked succesfully.",
+					"description": " has been locked succesfully by "
+				}
+			},
+			"unlock": {
+				"description": "Unlocks (Allows messages) the current/mentioned channel(s).",
+				"usage": [
+					{
+						"description": "Unlocks the current channel",
+						"example": "{PREFIX}unlock"
+					},
+					{
+						"description": "Unlocks the given channel",
+						"example": "{PREFIX}unlock #general"
+					}
+				],
+				"errorEmbed": {
+					"channelNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "Couldn't find that channel, suggested reasons:\n> Incorrect Mention\n> ⚠️ This command does not support channel ID"
+					},
+					"alreadyUnlocked": {
+						"title": "Error has occured while running this command.",
+						"description": "This channel is already unlocked."
+					}
+				},
+				"embed": {
+					"title": "Unlocked succesfully.",
+					"description": " has been unlocked succesfully by "
+				}
+			},
+			"mute": {
+				"description": "Mutes the mentioned/given user from the discord server for the specified time.",
+				"usage": [
+					{
+						"description": "Adds the muted role to the provided/given user.",
+						"example": "{PREFIX}mute @Moonlightt#2222 1h"
+					}
+				],
+				"errorEmbed": {
+					"memberNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "The following user doesn't exist, suggested reasons\n> Wrong ID\n> Wrong Name#Tag"
+					},
+					"noTimeProvided": {
+						"title": "Error has occured while running this command.",
+						"description": "Please provide a time"
+					},
+					"alreadyMuted": {
+						"title": "Error has occured while running this command.",
+						"description": "This user is already muted."
+					},
+					"higherRole": {
+						"title": "Error has occured while running this command.",
+						"description": "You cannot mute this user, suggested reasons:\n> This user has a higher role than me"
+					},
+					"unknownError": {
+						"title": "Error has occured while running this command.",
+						"description": "The following error has occured: "
+					}
+				},
+				"embed": {
+					"title": "This user has been muted.",
+					"description": " has been muted for: ",
+					"descriptiontwo": " in this server."
+				}
+			},
+			"unmute": {
+				"description": "Unmutes a user from the discord server.",
+				"usage": [
+					{
+						"description": "Removes the muted user from the provided user."
+					}
+				],
+				"errorEmbed": {
+					"memberNotFound": {
+						"title": "Error has occured while running this command.",
+						"description": "We couldn't find that user, suggested reasons:\n> Wrong ID\n> User isn't in the server."
+					},
+					"notMuted": {
+						"title": "Error has occured while running this command.",
+						"description": "We couldn't unmute this user, suggested reasons:\n> User is not muted"
+					}
+				},
+				"embed": {
+					"title": "Unmuted succesfully.",
+					"description": "The following user: ",
+					"descriptiontwo": " has been unmuted from the server."
+				}
+			},
+			"purge": {
+				"description": "deletes the specified ammount of messages",
+				"usage": [
+					{
+						"description": "Deletes the provided amount of messages",
+						"example": "{PREFIX}purge 5"
+					}
+				],
+				"errorEmbed": {
+					"notANumber": {
+						"title": "The following error has occured while running this command.",
+						"description": "> Please provide a number only."
+					},
+					"lowNumber": {
+						"title": "The following error has occured while running this command.",
+						"description": "> Please provide a number less than 100"
+					},
+					"highNumber": {
+						"title": "The following error has occured while running this command.",
+						"description": "Please provide a number more than one."
+					}
+				},
+				"embed": {
+					"title": "Deleted succesfully.",
+					"description": "The following amount: ",
+					"descriptiontwo": " was succesfully deleted."
+				}
+			},
+			"setslowmode": {
+				"description": "Sets the channel slowmode (allos you to set less than 5 seconds)",
+				"usage": [
+					{
+						"description": "Sets the slowmode, allows less than 5 seconds.",
+						"example": "{PREFIX}setslowmode 2s"
+					}
+				],
+				"highNumber": "The slowdown amount has to be less than 6 hours",
+				"errorEmbed": {
+					"notANumber": {
+						"title": "The following error has occured while running this command.",
+						"description": "> Please provide a number only."
+					}
+				},
+				"embed": {
+					"slowmodeRemoved": {
+						"title": "Slowmode has been removed.",
+						"description": "The slowmode has been succesfully removed from this channel."
+					},
+					"set": {
+						"title": "Slowmode has been set.",
+						"description": "The slow mode has been succesfully set to:"
+					}
+				}
+			},
+			"urlprot": {
+				"description": "Deletes any link that is sent to the discord server.",
+				"usage": [
+					{
+						"description": "Enables the urlprot for the server",
+						"example": "{PREFIX}urlprot on"
+					},
+					{
+						"description": "Disables the urlprot for the server",
+						"example": "{PREFIX}urlprot off"
+					}
+				],
+				"argsTooSmall": "Please provide the setting value e.g., {PREFIX}urlprot on",
+				"enabled": "URLPROT is on, users can't send messages that are links in the server.",
+				"urlprotOff": "URLPROT is not on to be disabled.",
+				"disabled": "URLPROT is disabled for this guild."
+			},
+			"autorole": {
+				"description": "Adds the mentioned/given role to the mentioned/given user.",
+				"usage": [
+					{
+						"description": "Sets the autorole to enabled and sets the role",
+						"example": "{PREFIX}autorole on @Member"
+					},
+					{
+						"description": "Sets the autorole to disabled",
+						"example": "{PREFIX}autorole off"
+					}
+				],
+				"errorEmbed": {
+					"provdeOption": {
+						"title": "Avaliable Autorole Options",
+						"description": "To set autorole, you need to give a few information, such as the role that should be given.\n> .autorole < On/Off> [ Role Name (Mandotory if On)]"
+					},
+					"invalidOption": {
+						"title": "Error has occured while running this command",
+						"description": "The option you provided was invalid! This is the correct usage: .autorole < On/Off> [ Role Name (Mandotory if On)]"
+					},
+					"invalidRole": {
+						"title": "Error has occured while running this command",
+						"description": "The role that was provided could not be found. Please try again."
+					},
+					"higherRole": {
+						"title": "Error has occured while running this command",
+						"description": "The role that was provided is too high for me to give. Please try again."
+					}
+				},
+				"set": "The autorole has been successfully setup for this server."
+			}
+		},
+		"invites": {
+			"invitecodes": {
+				"description": "Get's the user's invitecodes for this server.",
+				"usage": [
+					{
+						"description": "Gets the invitecodes of the mentioned user",
+						"example": "{PREFIX}invitecodes @Moonlightt#2222"
+					}
+				],
+				"embed": {
+					"noInvites": "This member does not have any invitecodes/invites.",
+					"inviteFor": "{EMOJI_LINK} Invite codes for: ",
+					"descriptionOne": " Uses: ",
+					"caseNever": "Never",
+					"descriptionTwo": " Expires At: "
+				}
+			},
+			"invites": {
+				"description": "Gets the mentioned/given user's invite count for this server.",
+				"usage": [
+					{
+						"description": "Gets the invite count of the user that ran the command.",
+						"example": "{PREFIX}invites"
+					},
+					{
+						"description": "Gets the invite count of the mentioned user",
+						"example": "{PREFIX}invites @Moonlightt#2222"
+					}
+				],
+				"embed": {
+					"title": "Invite count for: ",
+					"description": "Total invites: ",
+					"fields": [
+						{
+							"name": "{EMOJI_MEMBERS} Joins",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "{EMOJI_SRVLEAVES} Leaves",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "{EMOJI_PLUS} Bonus",
+							"value": "",
+							"inline": true
+						}
+					],
+					"footer": "Command used by: "
+				},
+				"leaderboard": {
+					"description": "Show's the leaderboard for the top invites.",
+					"usage": [
+						{
+							"description": "Shows the leaderboard for the guild.",
+							"example": "{PREFIX}leaderboard"
+						}
+					],
+					"notInLeaderboard": "You're not on the leaderboard.",
+					"embed": {
+						"title": "Leaderboard for ",
+						"fieldone": "Your rank: ",
+						"buttons": {
+							"first": "First",
+							"previous": "Previous",
+							"next": "Next",
+							"last": "Last"
+						}
+					}
+				},
+				"resetsettings": {
+					"description": "Reset the setting provided.",
+					"usage": [
+						{
+							"description": "Shows the menu, and allows you to reset any setting you want, e.g. Welcome Channel",
+							"example": "{PREFIX}resetsettings"
+						}
+					],
+					"buttonError": "These buttons only apply to the person who ran the command.",
+					"embed": {
+						"title": "Invite settings",
+						"description": "Select the buttons below to reset the config settings.\n\nIf the button is grey, it means the setting has been reset or the setting wasn't configured.",
+						"footer": "Please note that once you press the button, the action is irreverseable.",
+						"buttons": {
+							"one": "Welcome Channel",
+							"two": "Leave Channel",
+							"three": "Welcome Message",
+							"four": "Leave Message",
+							"five": "Done"
+						}
+					}
+				},
+				"setbonus": {
+					"description": "Adds bonus invites to the mentioned/given user.",
+					"usage": [
+						{
+							"description": "Sets bonus to the mentioned user with the provided amount",
+							"example": "{PREFIX}setbonus @Moonlightt#2222 5"
+						}
+					],
+					"incorrectUsage": "Incorrect Usage.\n\nCorrect usage: `.setbonus [ user ] [ number ]`",
+					"incorrectUser": "Please make sure that the member is in this server.",
+					"invalidNumber": "Please make sure that the amount is a valid integer.",
+					"lowNumber": "The minimum amount for the bonus is 1.",
+					"set": "The bonus invites have been added to the user."
+				},
+				"setjoinchannel": {
+					"description": "Set the channel to greet the member when they join the server",
+					"usage": [
+						{
+							"description": "Sets the join channel to #welcome",
+							"example": "{PREFIX}setjoinchannel #welcome"
+						}
+					],
+					"mentionTextChannel": "Mention a text channel to set the join channel.",
+					"channelNotFound": "The provided channel was not found.",
+					"notTextChannel": "Please provide text channels only.",
+					"set": "The join channel has been set to:"
+				},
+				"setjoinmessage": {
+					"description": "Set the message to greet the member when they join the server",
+					"usage": [
+						{
+							"description": "Provides embed setup, if embed was selected",
+							"example": "{PREFIX}setjoinmessage"
+						},
+						{
+							"description": "Sets a normal message welcome.",
+							"example": "{PREFIX}setjoinmessage"
+						}
+					],
+					"embed": {
+						"authorText": "This is an author text",
+						"title": "This is a title",
+						"description": "This is a description.\n\nUse the buttons below to configure this embed.",
+						"footerText": "This is a footer text",
+						"fields": [
+							{
+								"name": "This is a field name",
+								"value": "This is a field description",
+								"inline": true
+							}
+						],
+						"buttons": {
+							"one": "Author text",
+							"two": "Author icon",
+							"three": "Title",
+							"four": "Thumbnail",
+							"five": "Description",
+							"six": "Color",
+							"seven": "New field",
+							"eight": "Delete last field",
+							"nine": "Footer text",
+							"ten": "Footer icon",
+							"eleven": "Done",
+							"tweleve": "Cancel."
+						},
+						"objects": {
+							"one": "Type the text that will be added to the author title",
+							"two": "Type the link that will be added to the author icon",
+							"three": "Type the text that will be added to the title",
+							"four": "Type the link that will be added to thumbnail",
+							"five": "Type the text that will be added to the description",
+							"six": "Type the color to be added at the side of the embed.",
+							"seven": "Type the text that will be added to the file",
+							"eight": "Type the text that will be added to the footer text",
+							"nine": "Type the link that will be added to the footer icon"
+						}
+					},
+					"cancelled": "Embed builder has been cancelled.",
+					"typeError": "Cannot read undefined object",
+					"256CharMax": "Please enter text shorter than 256 characters.",
+					"3000CharMax": "Please enter text shorter than 3000 characters.",
+					"authorImgHasToBeLink": "Author image has to be a link.",
+					"invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
+					"invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
+					"fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
+					"footerImgHasToBeLink": "Footer icon has to be a link.",
+					"thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
+					"cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
+					"cancelled_RerunPopupTwo": "leavemsg",
+					"buttonError": "These buttons only apply to the person who ran the command.",
+					"cancelTitle": "Embed builder canceled",
+					"cancelDescription": "This action has been canceled",
+					"variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
+					"variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
+					"tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
+					"option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
+					"textWrite": "Write the message.",
+					"1000CharMax": "Please provide text less than 1000 characters.",
+					"set": "The embed has been set up, and will be sent when a user leaves.",
+					"textSet": "Leave message has been set."
+				},
+				"setleavechannel": {
+					"description": "Set the channel to announce if the member has left the server.",
+					"usage": [
+						{
+							"description": "Sets the leave channel to #byebye",
+							"example": "{PREFIX}setleavechannel #byebye"
+						}
+					],
+					"mentionTextChannel": "Mention a text channel to set the leave channel.",
+					"channelNotFound": "The provided channel was not found.",
+					"notTextChannel": "Please provide text channels only.",
+					"set": "The leave channel has been set to:"
+				},
+				"setleavemessage": {
+					"description": "Set the message to announce that the member has left the server",
+					"usage": [
+						{
+							"description": "Provides embed setup, if embed was selected",
+							"example": "{PREFIX}setleavesmessage"
+						},
+						{
+							"description": "Sets a normal message for leave.",
+							"example": "{PREFIX}setleavemessage"
+						}
+					],
+					"embed": {
+						"authorText": "This is an author text",
+						"title": "This is a title",
+						"description": "This is a description.\n\nUse the buttons below to configure this embed.",
+						"footerText": "This is a footer text",
+						"fields": [
+							{
+								"name": "This is a field name",
+								"value": "This is a field description",
+								"inline": true
+							}
+						],
+						"buttons": {
+							"one": "Author text",
+							"two": "Author icon",
+							"three": "Title",
+							"four": "Thumbnail",
+							"five": "Description",
+							"six": "Color",
+							"seven": "New field",
+							"eight": "Delete last field",
+							"nine": "Footer text",
+							"ten": "Footer icon",
+							"eleven": "Done",
+							"tweleve": "Cancel."
+						},
+						"objects": {
+							"one": "Type the text that will be added to the author title",
+							"two": "Type the link that will be added to the author icon",
+							"three": "Type the text that will be added to the title",
+							"four": "Type the link that will be added to thumbnail",
+							"five": "Type the text that will be added to the description",
+							"six": "Type the color to be added at the side of the embed.",
+							"seven": "Type the text that will be added to the file",
+							"eight": "Type the text that will be added to the footer text",
+							"nine": "Type the link that will be added to the footer icon"
+						}
+					},
+					"cancelled": "Embed builder has been cancelled.",
+					"typeError": "Cannot read undefined object",
+					"256CharMax": "Please enter text shorter than 256 characters.",
+					"3000CharMax": "Please enter text shorter than 3000 characters.",
+					"authorImgHasToBeLink": "Author image has to be a link.",
+					"invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
+					"invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
+					"fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
+					"footerImgHasToBeLink": "Footer icon has to be a link.",
+					"thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
+					"cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
+					"cancelled_RerunPopupTwo": "leavemsg",
+					"buttonError": "These buttons only apply to the person who ran the command.",
+					"cancelTitle": "Embed builder canceled",
+					"cancelDescription": "This action has been canceled",
+					"variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
+					"variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
+					"tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
+					"option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
+					"textWrite": "Write the message.",
+					"1000CharMax": "Please provide text less than 1000 characters.",
+					"set": "The embed has been set up, and will be sent when a user leaves.",
+					"textSet": "Leave message has been set."
+				},
+				"viewsettings": {
+					"description": "View's the selected setting.",
+					"usage": [
+						{
+							"description": "Shows the button menu for the user to select what setting to view.",
+							"example": "{PREFIX}viewsettings"
+						}
+					],
+					"buttonError": "These buttons only apply to the person who ran the command.",
+					"embed": {
+						"title": "Invite settings",
+						"description": "Select what setting you want to view.",
+						"buttons": {
+							"one": "Welcome Channel",
+							"two": "Leave Channel",
+							"three": "Welcome Message",
+							"four": "Leave Message",
+							"five": "Done"
+						},
+						"case": {
+							"welcomechannel": "Welcome message channel: ",
+							"leavechannel": "Leave message channel: ",
+							"welcomemessage": "Welcome message content: ",
+							"leavemessage": "Leave message content: "
+						}
+					}
+				}
+			}
+		},
+		"giveaways": {
+			"create": {
+				"description": "Creates a giveaway in the server",
+				"usage": [
+					{
+						"description": "Setups the giveaway, then confirms it.",
+						"example": "{PREFIX}create"
+					}
+				],
+				"invalidTimeFormat": "Invalid format, please provide a correct format",
+				"minimiumTime": "The minimum giveaway time is 1 minute, and the maximum is 14 days",
+				"channelNotFound": "Channel not found, please try again.",
+				"notTextChannel": "The channel you provided is not a text channel, please make sure its a text channel.",
+				"prizeMsgTooLong": "Prize message is too long, please decrease the prize message.",
+				"insentValidNum": "Please insert a valid number.",
+				"minimumWinners": "The minimum amount of winners is 1, and the maximum is 20.",
+				"descriptionTooLong": "Description is too long, please decrease the description.",
+				"serverNotFound": "Server was not found, make sure that you provide the server invite, then server ID first. Not fixed? Make sure the bot is in the other guild.",
+				"notGg": "Invalid invite format, please make sure it includes: `discord.gg/`, or `discord.com/invite`",
+				"invalidRole": "Invalid role: ",
+				"invalidResponse_RoleEntries": "Invalid response. Example response: `roleB - 2, roleA - 4`",
+				"roleNotFoundOne": "Role ",
+				"roleNotFoundTwo": "  not found! Please try again.",
+				"tooLong": "You took too long to respond, the giveaway creation has been canceled.",
+				"questions": {
+					"one": "What is the time limit on your giveaway? s/m/h/d",
+					"two": "Which channel should the giveaway message be posted?",
+					"three": "Which channel should the giveaway message be posted?",
+					"four": "How many winners should there be for this giveaway?",
+					"five": "What is the description of the giveaway? (Type N to skip)",
+					"six": "What are the required guild to be joined? Send the server ID then link. (Type N to skip)",
+					"sixextra": "Okay, now please enter the server link.",
+					"seven": "What are the required roles to have? (Type N to skip)",
+					"eight": "What roles have more enteries then other? (Type N to skip)"
+				},
+				"embed": {
+					"title": "Giveaway Message",
+					"descriptionOne": "Please ensure that the following details are correct:\n\nPrize: ",
+					"descriptionTwo": "\nChannel: ",
+					"descriptionThree": "\nEnds at: ",
+					"descriptionFour": "\nDescription: ",
+					"descriptionFourElse": "\nNone",
+					"descriptionFive": "\n\nRequirements:\n - Server to join: ",
+					"descriptionSix": "\n - Roles required: ",
+					"descriptionSeven": "\n\nAdditional Entries: ",
+					"confirmButton": "Press the button to confirm"
+				}
+			},
+			"list": {
+				"description": "Sends a list of active giveaway in the server.",
+				"usage": [
+					{
+						"description": "Gets the list of giveaways then sends it.",
+						"example": "{PREFIX}list"
+					}
+				],
+				"noActiveDescription": "No active giveaways.",
+				"embed": {
+					"title": "Active Giveaways",
+					"description": "\nEnds at: "
+				}
+			},
+			"reroll": {
+				"description": "Rerolls a winner for a giveaway.",
+				"usage": [
+					{
+						"description": "Rolls the giveaway of the provided ID",
+						"example": "{PREFIX}reroll 960984131687305216"
+					}
+				],
+				"noMsgId": "You need to give the message id.\nUsage: .reroll [ message id ]",
+				"notFound": "Giveaway not found, please make sure you insert a valid Giveaway ID and to be in the same channel as the giveaway message.",
+				"notEnded": "This giveaway has not been ended yet.",
+				"noReactions": "No one reacted to the giveaway.",
+				"msgOne": "A new winner has been rolled! Congratulations ",
+				"msgTwo": ", you have won",
+				"msgThree": "\n\nGiveaway Message: "
+			},
+			"stop": {
+				"description": "Stops a giveaway in the server.",
+				"usage": [
+					{
+						"description": "Stops the giveaway of the provided ID",
+						"example": "{PREFIX}end 960984131687305216"
+					}
+				],
+				"noMsgId": "You need to give the message id.\nUsage: .stop [ message id ]",
+				"invalidGw": "Invalid Giveaway ID, please make sure to provide the correct giveaway ID.",
+				"ending": "Ending giveaway..."
+			}
+		}
+	}
 }
