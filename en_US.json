@@ -967,22 +967,23 @@
 					"fields": [
 						{
 							"name": "{EMOJI_MEMBERS} Joins",
-							"value": "",
+							"value": "{JOINS}",
 							"inline": true
 						},
 						{
 							"name": "{EMOJI_SRVLEAVES} Leaves",
-							"value": "",
+							"value": "{LEAVES}",
 							"inline": true
 						},
 						{
 							"name": "{EMOJI_PLUS} Bonus",
-							"value": "",
+							"value": "{BONUS}",
 							"inline": true
 						}
 					],
 					"footer": "Command used by: "
-				},
+				}
+			},
 				"leaderboard": {
 					"description": "Show's the leaderboard for the top invites.",
 					"usage": [
@@ -994,7 +995,7 @@
 					"notInLeaderboard": "You're not on the leaderboard.",
 					"embed": {
 						"title": "Leaderboard for ",
-						"fieldone": "Your rank: ",
+						"fieldOne": "Your rank: ",
 						"buttons": {
 							"first": "First",
 							"previous": "Previous",
@@ -1050,7 +1051,7 @@
 					"mentionTextChannel": "Mention a text channel to set the join channel.",
 					"channelNotFound": "The provided channel was not found.",
 					"notTextChannel": "Please provide text channels only.",
-					"set": "The join channel has been set to:"
+					"set": "The join channel has been set to: "
 				},
 				"setjoinmessage": {
 					"description": "Set the message to greet the member when they join the server",
@@ -1334,4 +1335,3 @@
 			}
 		}
 	}
-}
