@@ -25,7 +25,7 @@
 				"embed": {
 					"title": "Yono Help Command",
 					"descriptionDefault": "**Help Menu | Yono** Information, Support, and Commands:\n\n{EMOJI_SUPPORT} **Information** :: Provides general & informative commands for bot, such as help, ping and many other commands.\n{EMOJI_MODERATION} **Moderation** :: Every server needs moderation commands, keeping the server safe is a priority.\n{EMOJI_UTIL} **Utility** :: Utility commands could come handy sometimes.\n {EMOJI_FUN} **Fun & Images** :: Fun commands are needed always.\n {EMOJI_GIVEAWAYS} **Giveaways** :: Create giveaways for your members, weather its with requirements or not.\n {EMOJI_MEMBER} **Invite Management** :: Track the invites and set welcome messages and more.\n {EMOJI_MUSIC} **Music** :: Play music from different platforms such as spotify.",
-					"descriptionOne": "**Help Menu | Yono** Information, Support, and Commands\n{EMOJI_INFO} **Yono** bot is a multi purpose bot made for everyone, Yono (You only need one). Need help? Run the `{PREFIX}support` command to get support/contact links.:"
+					"descriptionOne": "**Help Menu | Yono** Information, Support, and Commands:\n{EMOJI_INFO} **Yono** bot is a multi purpose bot made for everyone, Yono (You only need one). Need help? Run the `{PREFIX}support` command to get support/contact links.\n\n"
 				},
 				"cmdEmbed": {
 					"fields": [
@@ -94,12 +94,12 @@
 					"fields": [
 						{
 							"name": "Owner",
-							"value": "",
+							"value": "{GUILD_OWNER}",
 							"inline": true
 						},
 						{
 							"name": "Server ID",
-							"value": "",
+							"value": "{SERVER_ID}",
 							"inline": true
 						},
 						{
@@ -114,7 +114,7 @@
 						},
 						{
 							"name": "Emojis",
-							"value": "",
+							"value": "{EMOJI_COUNT}",
 							"inline": true
 						},
 						{
@@ -145,7 +145,7 @@
 				],
 				"embed": {
 					"title": "Yono Support Methods",
-					"description": "{EMOJIS_INFO} Need help? check out our discord server or website for help:",
+					"description": "{EMOJI_INFO} Need help? check out our discord server or website for help:",
 					"fields": [
 						{
 							"name": "Discord server:",
@@ -967,278 +967,277 @@
 					"fields": [
 						{
 							"name": "{EMOJI_MEMBERS} Joins",
-							"value": "{JOINS}",
+							"value": "",
 							"inline": true
 						},
 						{
 							"name": "{EMOJI_SRVLEAVES} Leaves",
-							"value": "{LEAVES}",
+							"value": "",
 							"inline": true
 						},
 						{
 							"name": "{EMOJI_PLUS} Bonus",
-							"value": "{BONUS}",
+							"value": "",
 							"inline": true
 						}
 					],
 					"footer": "Command used by: "
 				}
 			},
-				"leaderboard": {
-					"description": "Show's the leaderboard for the top invites.",
-					"usage": [
+			"leaderboard": {
+				"description": "Show's the leaderboard for the top invites.",
+				"usage": [
+					{
+						"description": "Shows the leaderboard for the guild.",
+						"example": "{PREFIX}leaderboard"
+					}
+				],
+				"notInLeaderboard": "You're not on the leaderboard.",
+				"embed": {
+					"title": "Leaderboard for ",
+					"fieldone": "Your rank: ",
+					"buttons": {
+						"first": "First",
+						"previous": "Previous",
+						"next": "Next",
+						"last": "Last"
+					}
+				}
+			},
+			"resetsettings": {
+				"description": "Reset the setting provided.",
+				"usage": [
+					{
+						"description": "Shows the menu, and allows you to reset any setting you want, e.g. Welcome Channel",
+						"example": "{PREFIX}resetsettings"
+					}
+				],
+				"buttonError": "These buttons only apply to the person who ran the command.",
+				"embed": {
+					"title": "Invite settings",
+					"description": "Select the buttons below to reset the config settings.\n\nIf the button is grey, it means the setting has been reset or the setting wasn't configured.",
+					"footer": "Please note that once you press the button, the action is irreverseable.",
+					"buttons": {
+						"one": "Welcome Channel",
+						"two": "Leave Channel",
+						"three": "Welcome Message",
+						"four": "Leave Message",
+						"five": "Done"
+					}
+				}
+			},
+			"setbonus": {
+				"description": "Adds bonus invites to the mentioned/given user.",
+				"usage": [
+					{
+						"description": "Sets bonus to the mentioned user with the provided amount",
+						"example": "{PREFIX}setbonus @Moonlightt#2222 5"
+					}
+				],
+				"incorrectUsage": "Incorrect Usage.\n\nCorrect usage: `.setbonus [ user ] [ number ]`",
+				"incorrectUser": "Please make sure that the member is in this server.",
+				"invalidNumber": "Please make sure that the amount is a valid integer.",
+				"lowNumber": "The minimum amount for the bonus is 1.",
+				"set": "The bonus invites have been added to the user."
+			},
+			"setjoinchannel": {
+				"description": "Set the channel to greet the member when they join the server",
+				"usage": [
+					{
+						"description": "Sets the join channel to #welcome",
+						"example": "{PREFIX}setjoinchannel #welcome"
+					}
+				],
+				"mentionTextChannel": "Mention a text channel to set the join channel.",
+				"channelNotFound": "The provided channel was not found.",
+				"notTextChannel": "Please provide text channels only.",
+				"set": "The join channel has been set to:"
+			},
+			"setjoinmessage": {
+				"description": "Set the message to greet the member when they join the server",
+				"usage": [
+					{
+						"description": "Provides embed setup, if embed was selected",
+						"example": "{PREFIX}setjoinmessage"
+					},
+					{
+						"description": "Sets a normal message welcome.",
+						"example": "{PREFIX}setjoinmessage"
+					}
+				],
+				"embed": {
+					"authorText": "This is an author text",
+					"title": "This is a title",
+					"description": "This is a description.\n\nUse the buttons below to configure this embed.",
+					"footerText": "This is a footer text",
+					"fields": [
 						{
-							"description": "Shows the leaderboard for the guild.",
-							"example": "{PREFIX}leaderboard"
+							"name": "This is a field name",
+							"value": "This is a field description",
+							"inline": true
 						}
 					],
-					"notInLeaderboard": "You're not on the leaderboard.",
-					"embed": {
-						"title": "Leaderboard for ",
-						"fieldOne": "Your rank: ",
-						"buttons": {
-							"first": "First",
-							"previous": "Previous",
-							"next": "Next",
-							"last": "Last"
-						}
+					"buttons": {
+						"one": "Author text",
+						"two": "Author icon",
+						"three": "Title",
+						"four": "Thumbnail",
+						"five": "Description",
+						"six": "Color",
+						"seven": "New field",
+						"eight": "Delete last field",
+						"nine": "Footer text",
+						"ten": "Footer icon",
+						"eleven": "Done",
+						"tweleve": "Cancel."
+					},
+					"objects": {
+						"one": "Type the text that will be added to the author title",
+						"two": "Type the link that will be added to the author icon",
+						"three": "Type the text that will be added to the title",
+						"four": "Type the link that will be added to thumbnail",
+						"five": "Type the text that will be added to the description",
+						"six": "Type the color to be added at the side of the embed.",
+						"seven": "Type the text that will be added to the file",
+						"eight": "Type the text that will be added to the footer text",
+						"nine": "Type the link that will be added to the footer icon"
 					}
 				},
-				"resetsettings": {
-					"description": "Reset the setting provided.",
-					"usage": [
+				"cancelled": "Embed builder has been cancelled.",
+				"typeError": "Cannot read undefined object",
+				"256CharMax": "Please enter text shorter than 256 characters.",
+				"3000CharMax": "Please enter text shorter than 3000 characters.",
+				"authorImgHasToBeLink": "Author image has to be a link.",
+				"invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
+				"invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
+				"fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
+				"footerImgHasToBeLink": "Footer icon has to be a link.",
+				"thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
+				"cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
+				"cancelled_RerunPopupTwo": "leavemsg",
+				"buttonError": "These buttons only apply to the person who ran the command.",
+				"cancelTitle": "Embed builder canceled",
+				"cancelDescription": "This action has been canceled",
+				"variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
+				"variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
+				"tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
+				"option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
+				"textWrite": "Write the message.",
+				"1000CharMax": "Please provide text less than 1000 characters.",
+				"set": "The embed has been set up, and will be sent when a user leaves.",
+				"textSet": "Leave message has been set."
+			},
+			"setleavechannel": {
+				"description": "Set the channel to announce if the member has left the server.",
+				"usage": [
+					{
+						"description": "Sets the leave channel to #byebye",
+						"example": "{PREFIX}setleavechannel #byebye"
+					}
+				],
+				"mentionTextChannel": "Mention a text channel to set the leave channel.",
+				"channelNotFound": "The provided channel was not found.",
+				"notTextChannel": "Please provide text channels only.",
+				"set": "The leave channel has been set to:"
+			},
+			"setleavemessage": {
+				"description": "Set the message to announce that the member has left the server",
+				"usage": [
+					{
+						"description": "Provides embed setup, if embed was selected",
+						"example": "{PREFIX}setleavesmessage"
+					},
+					{
+						"description": "Sets a normal message for leave.",
+						"example": "{PREFIX}setleavemessage"
+					}
+				],
+				"embed": {
+					"authorText": "This is an author text",
+					"title": "This is a title",
+					"description": "This is a description.\n\nUse the buttons below to configure this embed.",
+					"footerText": "This is a footer text",
+					"fields": [
 						{
-							"description": "Shows the menu, and allows you to reset any setting you want, e.g. Welcome Channel",
-							"example": "{PREFIX}resetsettings"
+							"name": "This is a field name",
+							"value": "This is a field description",
+							"inline": true
 						}
 					],
-					"buttonError": "These buttons only apply to the person who ran the command.",
-					"embed": {
-						"title": "Invite settings",
-						"description": "Select the buttons below to reset the config settings.\n\nIf the button is grey, it means the setting has been reset or the setting wasn't configured.",
-						"footer": "Please note that once you press the button, the action is irreverseable.",
-						"buttons": {
-							"one": "Welcome Channel",
-							"two": "Leave Channel",
-							"three": "Welcome Message",
-							"four": "Leave Message",
-							"five": "Done"
-						}
+					"buttons": {
+						"one": "Author text",
+						"two": "Author icon",
+						"three": "Title",
+						"four": "Thumbnail",
+						"five": "Description",
+						"six": "Color",
+						"seven": "New field",
+						"eight": "Delete last field",
+						"nine": "Footer text",
+						"ten": "Footer icon",
+						"eleven": "Done",
+						"tweleve": "Cancel."
+					},
+					"objects": {
+						"one": "Type the text that will be added to the author title",
+						"two": "Type the link that will be added to the author icon",
+						"three": "Type the text that will be added to the title",
+						"four": "Type the link that will be added to thumbnail",
+						"five": "Type the text that will be added to the description",
+						"six": "Type the color to be added at the side of the embed.",
+						"seven": "Type the text that will be added to the file",
+						"eight": "Type the text that will be added to the footer text",
+						"nine": "Type the link that will be added to the footer icon"
 					}
 				},
-				"setbonus": {
-					"description": "Adds bonus invites to the mentioned/given user.",
-					"usage": [
-						{
-							"description": "Sets bonus to the mentioned user with the provided amount",
-							"example": "{PREFIX}setbonus @Moonlightt#2222 5"
-						}
-					],
-					"incorrectUsage": "Incorrect Usage.\n\nCorrect usage: `.setbonus [ user ] [ number ]`",
-					"incorrectUser": "Please make sure that the member is in this server.",
-					"invalidNumber": "Please make sure that the amount is a valid integer.",
-					"lowNumber": "The minimum amount for the bonus is 1.",
-					"set": "The bonus invites have been added to the user."
-				},
-				"setjoinchannel": {
-					"description": "Set the channel to greet the member when they join the server",
-					"usage": [
-						{
-							"description": "Sets the join channel to #welcome",
-							"example": "{PREFIX}setjoinchannel #welcome"
-						}
-					],
-					"mentionTextChannel": "Mention a text channel to set the join channel.",
-					"channelNotFound": "The provided channel was not found.",
-					"notTextChannel": "Please provide text channels only.",
-					"set": "The join channel has been set to: "
-				},
-				"setjoinmessage": {
-					"description": "Set the message to greet the member when they join the server",
-					"usage": [
-						{
-							"description": "Provides embed setup, if embed was selected",
-							"example": "{PREFIX}setjoinmessage"
-						},
-						{
-							"description": "Sets a normal message welcome.",
-							"example": "{PREFIX}setjoinmessage"
-						}
-					],
-					"embed": {
-						"authorText": "This is an author text",
-						"title": "This is a title",
-						"description": "This is a description.\n\nUse the buttons below to configure this embed.",
-						"footerText": "This is a footer text",
-						"fields": [
-							{
-								"name": "This is a field name",
-								"value": "This is a field description",
-								"inline": true
-							}
-						],
-						"buttons": {
-							"one": "Author text",
-							"two": "Author icon",
-							"three": "Title",
-							"four": "Thumbnail",
-							"five": "Description",
-							"six": "Color",
-							"seven": "New field",
-							"eight": "Delete last field",
-							"nine": "Footer text",
-							"ten": "Footer icon",
-							"eleven": "Done",
-							"tweleve": "Cancel."
-						},
-						"objects": {
-							"one": "Type the text that will be added to the author title",
-							"two": "Type the link that will be added to the author icon",
-							"three": "Type the text that will be added to the title",
-							"four": "Type the link that will be added to thumbnail",
-							"five": "Type the text that will be added to the description",
-							"six": "Type the color to be added at the side of the embed.",
-							"seven": "Type the text that will be added to the file",
-							"eight": "Type the text that will be added to the footer text",
-							"nine": "Type the link that will be added to the footer icon"
-						}
+				"cancelled": "Embed builder has been cancelled.",
+				"typeError": "Cannot read undefined object",
+				"256CharMax": "Please enter text shorter than 256 characters.",
+				"3000CharMax": "Please enter text shorter than 3000 characters.",
+				"authorImgHasToBeLink": "Author image has to be a link.",
+				"invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
+				"invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
+				"fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
+				"footerImgHasToBeLink": "Footer icon has to be a link.",
+				"thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
+				"cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
+				"cancelled_RerunPopupTwo": "leavemsg",
+				"buttonError": "These buttons only apply to the person who ran the command.",
+				"cancelTitle": "Embed builder canceled",
+				"cancelDescription": "This action has been canceled",
+				"variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
+				"variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
+				"tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
+				"option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
+				"textWrite": "Write the message.",
+				"1000CharMax": "Please provide text less than 1000 characters.",
+				"set": "The embed has been set up, and will be sent when a user leaves.",
+				"textSet": "Leave message has been set."
+			},
+			"viewsettings": {
+				"description": "View's the selected setting.",
+				"usage": [
+					{
+						"description": "Shows the button menu for the user to select what setting to view.",
+						"example": "{PREFIX}viewsettings"
+					}
+				],
+				"buttonError": "These buttons only apply to the person who ran the command.",
+				"embed": {
+					"title": "Invite settings",
+					"description": "Select what setting you want to view.",
+					"buttons": {
+						"one": "Welcome Channel",
+						"two": "Leave Channel",
+						"three": "Welcome Message",
+						"four": "Leave Message",
+						"five": "Done"
 					},
-					"cancelled": "Embed builder has been cancelled.",
-					"typeError": "Cannot read undefined object",
-					"256CharMax": "Please enter text shorter than 256 characters.",
-					"3000CharMax": "Please enter text shorter than 3000 characters.",
-					"authorImgHasToBeLink": "Author image has to be a link.",
-					"invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
-					"invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
-					"fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
-					"footerImgHasToBeLink": "Footer icon has to be a link.",
-					"thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
-					"cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
-					"cancelled_RerunPopupTwo": "leavemsg",
-					"buttonError": "These buttons only apply to the person who ran the command.",
-					"cancelTitle": "Embed builder canceled",
-					"cancelDescription": "This action has been canceled",
-					"variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
-					"variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
-					"tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
-					"option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
-					"textWrite": "Write the message.",
-					"1000CharMax": "Please provide text less than 1000 characters.",
-					"set": "The embed has been set up, and will be sent when a user leaves.",
-					"textSet": "Leave message has been set."
-				},
-				"setleavechannel": {
-					"description": "Set the channel to announce if the member has left the server.",
-					"usage": [
-						{
-							"description": "Sets the leave channel to #byebye",
-							"example": "{PREFIX}setleavechannel #byebye"
-						}
-					],
-					"mentionTextChannel": "Mention a text channel to set the leave channel.",
-					"channelNotFound": "The provided channel was not found.",
-					"notTextChannel": "Please provide text channels only.",
-					"set": "The leave channel has been set to:"
-				},
-				"setleavemessage": {
-					"description": "Set the message to announce that the member has left the server",
-					"usage": [
-						{
-							"description": "Provides embed setup, if embed was selected",
-							"example": "{PREFIX}setleavesmessage"
-						},
-						{
-							"description": "Sets a normal message for leave.",
-							"example": "{PREFIX}setleavemessage"
-						}
-					],
-					"embed": {
-						"authorText": "This is an author text",
-						"title": "This is a title",
-						"description": "This is a description.\n\nUse the buttons below to configure this embed.",
-						"footerText": "This is a footer text",
-						"fields": [
-							{
-								"name": "This is a field name",
-								"value": "This is a field description",
-								"inline": true
-							}
-						],
-						"buttons": {
-							"one": "Author text",
-							"two": "Author icon",
-							"three": "Title",
-							"four": "Thumbnail",
-							"five": "Description",
-							"six": "Color",
-							"seven": "New field",
-							"eight": "Delete last field",
-							"nine": "Footer text",
-							"ten": "Footer icon",
-							"eleven": "Done",
-							"tweleve": "Cancel."
-						},
-						"objects": {
-							"one": "Type the text that will be added to the author title",
-							"two": "Type the link that will be added to the author icon",
-							"three": "Type the text that will be added to the title",
-							"four": "Type the link that will be added to thumbnail",
-							"five": "Type the text that will be added to the description",
-							"six": "Type the color to be added at the side of the embed.",
-							"seven": "Type the text that will be added to the file",
-							"eight": "Type the text that will be added to the footer text",
-							"nine": "Type the link that will be added to the footer icon"
-						}
-					},
-					"cancelled": "Embed builder has been cancelled.",
-					"typeError": "Cannot read undefined object",
-					"256CharMax": "Please enter text shorter than 256 characters.",
-					"3000CharMax": "Please enter text shorter than 3000 characters.",
-					"authorImgHasToBeLink": "Author image has to be a link.",
-					"invalidColor": "Invalid color, please include the color name or hex code, e.g. WHITE or #ffffff",
-					"invalidSyntax": "Invalid syntax. You need a field name AND a field value. Please try again and seperate them using ` -f `. Example: `This is a field title -f This is a field value`",
-					"fieldMaxMin": "The field name has to be less than 256 characters, the field description has to be less than 1000 characters",
-					"footerImgHasToBeLink": "Footer icon has to be a link.",
-					"thumbnailImgHastoBeLink": "Thumbnail has to be a link.",
-					"cancelled_RerunPopupOne": "The embed builder has been cancelled, to rerun type: ",
-					"cancelled_RerunPopupTwo": "leavemsg",
-					"buttonError": "These buttons only apply to the person who ran the command.",
-					"cancelTitle": "Embed builder canceled",
-					"cancelDescription": "This action has been canceled",
-					"variablesMsg": "Use the variables below in a `/variable-name/` form when writing your text.",
-					"variables": "```inviter-id - Provides the ID of the inviter` \n `inviter-tag - Gives the user's tag e.g. Moonlightt#2222` \n `inviter-mention - Mentions the user that joined` \n `inviter-invites-total - Provides the total invites for the inviter` \n `inviter-invites-joins - Provides the joins for the inviter` \n `inviter-invites-leaves - Provides the leaves for the inviter` \n `inviter-invites-bonus - Provides the bonus for the inviter` \n `user-id - Provides the ID of the user that joined` \n `user-tag - Gives the user's tag e.g. Moonlightt#2222` \n `user-mention - Mentions the user that joined` \n `user-created-date - The creation date of the user that joined` \n `user-joined-date - The date that the user joined the server in` \n `invite-code - The invite code used to join` \n `invite-channel - The channel the invite code was created in` \n `invite-uses - The invite code uses` \n `guild-name - The guild name` \n `guild-membercount - The guild total membercount` \n `user-av - The avatar of the user that joined` \n `guild-av - The avatar of the guild` \n `inviter-av - The avatar of the inviter```",
-					"tooLongToRespond": "You took too long to respond, the embed builder has been cancelled.",
-					"option": "Do you want this to be an embed or a normal message - [`embed` / `normal`]",
-					"textWrite": "Write the message.",
-					"1000CharMax": "Please provide text less than 1000 characters.",
-					"set": "The embed has been set up, and will be sent when a user leaves.",
-					"textSet": "Leave message has been set."
-				},
-				"viewsettings": {
-					"description": "View's the selected setting.",
-					"usage": [
-						{
-							"description": "Shows the button menu for the user to select what setting to view.",
-							"example": "{PREFIX}viewsettings"
-						}
-					],
-					"buttonError": "These buttons only apply to the person who ran the command.",
-					"embed": {
-						"title": "Invite settings",
-						"description": "Select what setting you want to view.",
-						"buttons": {
-							"one": "Welcome Channel",
-							"two": "Leave Channel",
-							"three": "Welcome Message",
-							"four": "Leave Message",
-							"five": "Done"
-						},
-						"case": {
-							"welcomechannel": "Welcome message channel: ",
-							"leavechannel": "Leave message channel: ",
-							"welcomemessage": "Welcome message content: ",
-							"leavemessage": "Leave message content: "
-						}
+					"case": {
+						"welcomechannel": "Welcome message channel: ",
+						"leavechannel": "Leave message channel: ",
+						"welcomemessage": "Welcome message content: ",
+						"leavemessage": "Leave message content: "
 					}
 				}
 			}
@@ -1270,7 +1269,7 @@
 				"questions": {
 					"one": "What is the time limit on your giveaway? s/m/h/d",
 					"two": "Which channel should the giveaway message be posted?",
-					"three": "Which channel should the giveaway message be posted?",
+					"three": "What is the prize of the giveaway?",
 					"four": "How many winners should there be for this giveaway?",
 					"five": "What is the description of the giveaway? (Type N to skip)",
 					"six": "What are the required guild to be joined? Send the server ID then link. (Type N to skip)",
@@ -1335,3 +1334,4 @@
 			}
 		}
 	}
+}
