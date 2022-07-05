@@ -147,6 +147,30 @@
 					"unknownError": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
 				}
 			}
+		},
+		"util": {
+			"nowPlayingEmbedder": {
+				"pausedTooLongEmbed": {
+					"authorTitle": "The queue has been paused for too long.",
+					"description": "Yono will leave the voice channel within 60 seconds if the queue is not unpaused."
+				},
+				"timeElapsedEmbed": {
+					"authorTitle": "The queue has been paused for too long.",
+					"description": "The music has been paused for longer than 60 seconds after the warning, Yono has left the voice channel."
+				},
+				"activiatedAndDeactivatedFeatures": {
+					"loopActivated": "Looping has been activiated for this playlist.",
+					"loopDeactivated": "Looping has been deactivated for this playlist.",
+					"loopEnabled": "Looping has been enabled for this playlist.",
+					"shuffled": "Succesfully shuffled the playlist."
+				}
+			},
+			"paginator": {
+				"whichPageJump": "What page would you like to go to? Say `cancel` or `0` to cancel the prompt. Your window to reply ends in 15 seconds.",
+				"pageNumTooHigh": "The page to jump to must be less than or equal to {TOTAL_PAGES}. Please try again.",
+				"positiveRequired": "The number of the page cannot be negative.",
+				"integerRequired": "The number provided cannot be a decimal number."
+			}
 		}
 	},
 	"commands": {
