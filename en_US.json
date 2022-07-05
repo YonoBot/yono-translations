@@ -1504,6 +1504,78 @@
 				"invalidGw": "Invalid Giveaway ID, please make sure to provide the correct giveaway ID.",
 				"ending": "Ending giveaway..."
 			}
+		},
+		"music": {
+			"play": {
+				"description": "Play a song/playlist or search for a song from youtube\nSingle track options: insert\nPlaylist options: shuffle, reverse, insert, select\nInsert: inserts the track(s) to be next in queue.\nShuffle: shuffle the playlist before adding it to the queue.\nReverse: reverse the playlist before adding it to the queue.\nSelect: select a song from a playlist to add to queue.\n`[]` indicates optional arguments, the positions of the arguments in the help command are showing valid argument positions. `|` means there are multiple possible arguments",
+				"usage": [
+					{
+						"description": "Play a song from search",
+						"example": "play cometh the hour Shiro Sagisu [--insert|--select|--insert-select]"
+					  },
+					  {
+						"description": "Play a song from url",
+						"example": "play https://www.youtube.com/watch?v=lCvI3qFHD70 [--insert]"
+					  },
+					  {
+						"description": "Play a playlist from url",
+						"example":
+						  "play https://www.youtube.com/playlist?list=PLnUROAtdjrzJqH0mV_qQMVhE7OyLeuF0w [--shuffle|--reverse|--insert|--insert-shuffle|--insert-reverse]"
+					  },
+					  {
+						"description": "Select a song from a playlist",
+						"example":
+						  "play https://www.youtube.com/playlist?list=PLnUROAtdjrzJqH0mV_qQMVhE7OyLeuF0w --select [--insert]"
+					  }
+				],
+				"noPermissionEmbedLinks": "Yono is missing the required permissions to play music. Please provide the Embed Links permission.",
+				"notInVoiceChannel": "You must be in a voice channel to play music.",
+				"noPermissionVoice": "Yono is missing the required permissions to play usic. Please provide speaking permission.",
+				"trackLoadedEmbed": {
+					"authorTitle": "Enqueuing",
+					"fields": [
+						{
+							"name": "Author",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Song duration",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Estimated time until playing",
+							"value": "",
+							"inline": true
+						}
+					]
+				},
+				"slashInsert": {
+					"embed": {
+						"authorTitle": "Enqueueing to be next",
+						"fields": [
+							{
+								"name": "Song duration",
+								"value": "",
+								"inline": true
+							},
+							{
+								"name": "Estimated time until playing",
+								"value": "",
+								"inline": true
+							}
+						]
+					}
+				},
+				"errors": {
+					"noArguments": "Please provide a song name or link to search.",
+					"unknownErrorEmbed": {
+						"title": "An error has occured while executing this command",
+						"description": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
+					}
+				}
+			}
 		}
 	}
 }
