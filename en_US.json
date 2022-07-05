@@ -1511,21 +1511,21 @@
 				"usage": [
 					{
 						"description": "Play a song from search",
-						"example": "play cometh the hour Shiro Sagisu [--insert|--select|--insert-select]"
+						"example": "{PREFIX}play cometh the hour Shiro Sagisu [--insert|--select|--insert-select]"
 					  },
 					  {
 						"description": "Play a song from url",
-						"example": "play https://www.youtube.com/watch?v=lCvI3qFHD70 [--insert]"
+						"example": "{PREFIX}play https://www.youtube.com/watch?v=lCvI3qFHD70 [--insert]"
 					  },
 					  {
 						"description": "Play a playlist from url",
 						"example":
-						  "play https://www.youtube.com/playlist?list=PLnUROAtdjrzJqH0mV_qQMVhE7OyLeuF0w [--shuffle|--reverse|--insert|--insert-shuffle|--insert-reverse]"
+						  "{PREFIX}play https://www.youtube.com/playlist?list=PLnUROAtdjrzJqH0mV_qQMVhE7OyLeuF0w [--shuffle|--reverse|--insert|--insert-shuffle|--insert-reverse]"
 					  },
 					  {
 						"description": "Select a song from a playlist",
 						"example":
-						  "play https://www.youtube.com/playlist?list=PLnUROAtdjrzJqH0mV_qQMVhE7OyLeuF0w --select [--insert]"
+						  "{PREFIX}play https://www.youtube.com/playlist?list=PLnUROAtdjrzJqH0mV_qQMVhE7OyLeuF0w --select [--insert]"
 					  }
 				],
 				"noPermissionEmbedLinks": "Yono is missing the required permissions to play music. Please provide the Embed Links permission.",
@@ -1568,13 +1568,36 @@
 						]
 					}
 				},
+				"isStream": {
+					"fields": [
+						{
+							"name": "Song duration",
+							"value": "LIVE",
+							"inline": true
+						}
+					]
+				},
+				"unknownAuthor": "Unknown Author",
 				"errors": {
+					"formatNotSupported": "That is not a supported file extension supported extensions are `mp3`, `aac`, `wav`, `mp4`, `m4a`, `ogg`, `flac`, `mkv`",
 					"noArguments": "Please provide a song name or link to search.",
 					"unknownErrorEmbed": {
 						"title": "An error has occured while executing this command",
 						"description": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
 					}
 				}
+			},
+			"leave": {
+				"description": "Leaves the voice channel and ends the current queue",
+				"usage": [
+					{
+						"description": "Leaves the current voice channel",
+						"example": "{PREFIX}leave"
+					}
+				],
+				"notInVoiceChannel": "Yono is not in a voice channel in this guild to leave.",
+				"userNotInVoiceChannel": "Yono cannot leave since your not in any voice channel.",
+				"stopped": "Successfully stopped the music."
 			}
 		}
 	}
