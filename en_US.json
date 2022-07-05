@@ -82,6 +82,19 @@
 					"incorrectArgumentsEmbed": {
 						"title": "An error has occured while executing this command"
 					} 
+				},
+				"messageReactionAdd": {
+					"roleRequired": "<@{MEMBER_ID}>, you need to meet the set criteria in the giveaway. Please make sure you have the required role to participate.",
+					"notInGuild": "<@{MEMBER_ID}, you need to meet the set criteria in the giveaway. Please make sure you joined the required server to participate."
+				},
+				"messageUpdate": {
+					"antiLink": "<@{MEMBER_ID}>, No links allowed."
+				}
+			},
+			"guild": {
+				"giveawayEnd": {
+					"noValidEntries": "There are no valid entries for the following giveaway: https://discord.com/channels/{CHANNELC_GUILD_ID}/{CHANNELC_ID}/{MESSAGEID}",
+					"winnersMessage": "Congratulations {ALLWINNERS}, you have won: {PRIZE}"
 				}
 			}
 		}
