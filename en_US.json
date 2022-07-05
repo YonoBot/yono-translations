@@ -81,7 +81,7 @@
 					},
 					"incorrectArgumentsEmbed": {
 						"title": "An error has occured while executing this command"
-					} 
+					}
 				},
 				"messageReactionAdd": {
 					"roleRequired": "<@{MEMBER_ID}>, you need to meet the set criteria in the giveaway. Please make sure you have the required role to participate.",
@@ -95,6 +95,56 @@
 				"giveawayEnd": {
 					"noValidEntries": "There are no valid entries for the following giveaway: https://discord.com/channels/{CHANNELC_GUILD_ID}/{CHANNELC_ID}/{MESSAGEID}",
 					"winnersMessage": "Congratulations {ALLWINNERS}, you have won: {PRIZE}"
+				}
+			},
+			"music": {
+				"music": {
+					"noUsersInVoiceChannelEmbed": {
+						"authorTitle": "No members in my current voice channel.",
+						"description": "Yono will leave the voice channel within 60 seconds if nobody joins back.",
+						"timeElapsedEmbed": {
+							"authorTitle": "No members in my current voice channel.",
+							"description": "Yono will be leaving the voice channel as no one joined back within the 60 second mark."
+						}
+					}
+				},
+				"queueEnd": {
+					"queueEnded": "Queue has been ended, please add more music otherwise Yono will leave in 15 minutes.",
+					"timeElapsed": "Yono has left the Voice Channel since nothing has been played for over 15 minutes."
+				},
+				"trackEnd": {
+					"errorUnknown": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
+				},
+				"trackError": {
+					"errorEmbed": {
+						"authorTitle": "An error has occured while playing.",
+						"description": "Yono has ran into an error while playing: {TRACK_TITLE}. Please provide this error to the developers.\n ```{ERROR_STACK}```"
+					},
+					"fields": [
+						{
+							"name": "Channel",
+							"value": "",
+							"inline": true
+						},
+						{
+							"name": "Song duration",
+							"value": "",
+							"inline": true
+						}
+					],
+					"errorUnknowm": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
+				},
+				"trackStart": {
+					"trackEmbed": {
+						"authorTitle": "Now playing"
+					},
+					"errorUnknown": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
+				},
+				"trackStuck": {
+					"stuckEmbed": {
+						"description": "The track got stuck while playing {TRACK_NAME} [{REQUEST_USER}], Yono will be automatically skipping to the next track."
+					},
+					"unknownError": "An error has occured while ending the track. Please provide this error to the developers.\n ```{ERROR_STACK}```"
 				}
 			}
 		}
