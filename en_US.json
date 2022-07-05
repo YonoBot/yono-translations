@@ -2,6 +2,90 @@
 	"langShortName": "en_US",
 	"langLongName": "English",
 	"langLocale": "US",
+	"system": {
+		"events": {
+			"client": {
+				"guildMemberAdd": {
+					"vanity": "Vanity invite",
+					"noneInvited": "No one",
+					"inviteUsesNone": "None",
+					"defaultJoinMessage": {
+						"message": "<@{MEMBER_ID}> has joined! Welcome to {GUILD_NAME}. We now have {GUILD_MEMBER_AMOUNT} members!"
+					}
+				},
+				"guildMemberRemove": {
+					"vanity": "Vanity invite",
+					"noneInvited": "No one",
+					"inviteUsesNone": "None",
+					"defaultLeaveMessage": {
+						"message": "<@{MEMBER_ID}> has left {GUILD_NAME}. We now have {GUILD_MEMBER_AMOUNT} members!"
+					}
+				},
+				"messageCreate": {
+					"agreementLabels": {
+						"one": "Agree",
+						"two": "Don't agree"
+					},
+					"agreementEmbed": {
+						"buttonError": "These buttons only apply to the person who ran the command.",
+						"title": "Yono Legal Douments",
+						"description": "Thank you for using Yono, to continue using Yono you must agree to the latest Terms of Sevice, Privacy Policy, and Refund Policy. These can change at anytime without notice, please make sure to regularly check them.",
+						"fields": [
+							{
+								"name": "Agreement",
+								"value": "[Terms of Service](https://yonobot.us/terms-of-service)",
+								"inline": true
+							},
+							{
+								"name": "Privacy",
+								"value": "[Privacy Policy](https://yonobot.us/privacy-policy)",
+								"inline": true
+							},
+							{
+								"name": "Refunds",
+								"value": "[Refund Policy](https://yonobot.us/refund-policy)",
+								"inline": true
+							}
+						],
+						"agreedTrue": "Thank you for agreeing to Yono's legal documents.",
+						"agreedFalse": "To start using Yono, you must agree to the legal documents."
+					},
+					"antiLink": "<@{MEMBER_ID}>, No links allowed.",
+					"premiumEmbed": {
+						"title": "An error has occured while executing this command",
+						"description": "You need to be a premium user to use these commands, to get preimum [Join our discord server](https://yonobot.co.uk/discord)"
+					},
+					"blacklistEmbed": {
+						"title": "Error has occured while running this command.",
+						"description": "You are blacklisted from Yono, if you want to get unblacklisted, do the following steps:\n> 1) Join our [Discord Server](https://yonobot.co.uk)\n> 2) Apply the appeal form."
+					},
+					"yonoIntroductionEmbed": {
+						"title": "Yono Help",
+						"description": "Hey, My name is Yono im a multi-purpose discord bot! If you need help you can join our [Discord Server](https://yonobot.co.uk/invite) or [Check Our Website](https://yonobot.co.uk/).\n\n Don't know how to start? just run the following command:\n> `{PREFIX}help`"
+					},
+					"ownerOnlyEmbed": {
+						"title": "Error has occured while executing this command",
+						"description": "This command can only be used by the owner(s) of the bot"
+					},
+					"serverOnlyEmbed": {
+						"title": "Error has occured while executing this command",
+						"description": "This command can only be ran in servers. Command Name: {COMMAND_NAME}"
+					},
+					"directMessageOnlyEmbed": {
+						"title": "An error has occured while executing this command",
+						"description": "This command can only be ran in Direct Messages. Command Name: {COMMAND_NAME}"
+					},
+					"disabledCommand": {
+						"title": "An error has occured while executing this command",
+						"description": "This command has been disabled in this guild by the Owner, or globally by the developers."
+					},
+					"incorrectArgumentsEmbed": {
+						"title": "An error has occured while executing this command"
+					} 
+				}
+			}
+		}
+	},
 	"commands": {
 		"info": {
 			"help": {
@@ -809,7 +893,8 @@
 				"description": "Unmutes a user from the discord server.",
 				"usage": [
 					{
-						"description": "Removes the muted user from the provided user."
+						"description": "Removes the muted user from the provided user.",
+						"example": "{PREFIX}unmute @Moonlightt#2222"
 					}
 				],
 				"errorEmbed": {
