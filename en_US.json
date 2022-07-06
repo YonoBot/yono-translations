@@ -212,7 +212,7 @@
 						},
 						{
 							"name": "**Cooldown**",
-							"value": "{COMMAND_COOLDOWN}",
+							"value": "{COMMAND_COOLDOWN}ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
 							"inline": true
 						},
 						{
@@ -224,6 +224,11 @@
 							"name": "**Required Permissions**",
 							"value": "{COMMAND_MEMBERPERMISSIONS}",
 							"inline": true
+						},
+						{
+							"name": "**Examples**",
+							"value": "{COMMAND_EXAMPLES}",
+							"inline": false
 						}
 					]
 				}
